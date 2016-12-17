@@ -21,7 +21,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		FIRApp.configure()
+
+		//FIRDatabase.database().persistenceEnabled = true // fix / read more into this
+
 		FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+		
+		FIRAuth.auth()?.addStateDidChangeListener({ (auth, user) in
+			if let user = user {
+				self.window = UIWindow(frame: UIScreen.main.bounds)
+				let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+				let viewController = storyboard.instantiateViewController(withIdentifier: "MainRootVC")
+				self.window?.rootViewController = viewController
+				self.window?.makeKeyAndVisible()
+			} else {
+				self.window = UIWindow(frame: UIScreen.main.bounds)
+				let storyboard = UIStoryboard.init(name: "Login", bundle: nil)
+				let viewController = storyboard.instantiateViewController(withIdentifier: "LoginRootVC") as! ViewController
+				let navigationController = UINavigationController.init(rootViewController: viewController)
+				self.window?.rootViewController = navigationController
+				self.window?.makeKeyAndVisible()
+			}
+		})
+		self.window = UIWindow(frame: UIScreen.main.bounds)
+		let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+		let viewController = storyboard.instantiateViewController(withIdentifier: "MainRootVC")
+		self.window?.rootViewController = viewController
+		self.window?.makeKeyAndVisible()
+		
 		return true
 	}
 	

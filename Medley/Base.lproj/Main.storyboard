@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Medley" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainRootVC" id="BYZ-38-t0r" customClass="ViewController" customModule="Medley" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,9 +27,9 @@
                                     <constraint firstAttribute="height" constant="30" id="RQw-rs-aUf"/>
                                     <constraint firstAttribute="width" constant="144" id="xb8-Q9-8sf"/>
                                 </constraints>
-                                <state key="normal" title="Login With Facebook"/>
+                                <state key="normal" title="Already logged in"/>
                                 <connections>
-                                    <action selector="facebookLoginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KOy-ap-Fny"/>
+                                    <action selector="logoutClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="is9-HA-ken"/>
                                 </connections>
                             </button>
                         </subviews>
