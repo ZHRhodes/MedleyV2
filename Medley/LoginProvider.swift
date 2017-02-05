@@ -9,5 +9,5 @@
 import Foundation
 
 enum LoginProvider{
-	case FacebookLogin
+	case Facebook
 }

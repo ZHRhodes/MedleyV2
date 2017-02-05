@@ -11,10 +11,14 @@ import FirebaseAuth
 import FBSDKLoginKit
 
 class FacebookManager: SocialMediaProvider {	
-	var FIRDelegate = MedleySession.shared //any memory issues with this?
 	var loginManager = FBSDKLoginManager()
+	var type: LoginProvider {
+		get {
+			return LoginProvider.Facebook
+		}
+	}
 
-	func login(sender: UIViewController){
+	func login(sender: UIViewController, session: MedleySession){
 		
 		print("logging in ")
 		
@@ -27,7 +31,7 @@ class FacebookManager: SocialMediaProvider {
 			}else {
 				print("Facebook login successful")
 				let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-				self.FIRDelegate.login(withCredential: credential)
+				session.login(withCredential: credential)
 			}
 		})
 	}

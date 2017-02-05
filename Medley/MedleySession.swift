@@ -11,20 +11,20 @@ import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-protocol FirebaseLoginDelegate {
-	func login(withCredential credential: FIRAuthCredential)
+protocol FirebaseLoginResponseDelegate {
+	func handleUserLogin(isNewUser: Bool)
 }
 
-class MedleySession: FirebaseLoginDelegate {
-	static let shared = MedleySession()
+class MedleySession {
 	
-	var socialMediaProvider: SocialMediaProvider!
+	private(set) var isNewUser: Bool?
+	var loginResponseDelegate: FirebaseLoginResponseDelegate?
+	var ref: FIRDatabaseReference = FIRDatabase.database().reference()
 	
-	private init(){}
-	
-	func login(withProvider provider: SocialMediaProvider, sender: UIViewController){
-		socialMediaProvider = provider
-		provider.login(sender: sender)
+	//this is a lot of coupling!
+	func login(withProvider provider: SocialMediaProvider, sender: UIViewController, loginResponseDelegate: FirebaseLoginResponseDelegate){
+		self.loginResponseDelegate = loginResponseDelegate
+		provider.login(sender: sender, session: self)
 	}
 	
 	func login(withCredential credential: FIRAuthCredential){
@@ -33,18 +33,23 @@ class MedleySession: FirebaseLoginDelegate {
 			print("Firebase Facebook login failed. Error \(error)")
 			}else {
 			print("Firebase Facebook login successful. User \(user)")
+				FIRDatabase.database().reference().child("users").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+					// Check if user already exists
+					self.isNewUser = !snapshot.exists()
+					self.loginResponseDelegate?.handleUserLogin(isNewUser: self.isNewUser!)
+				})
 			}
 		})
 	}
 	
-	func logout(){
+	static func logout(){
 		do {
 			try FIRAuth.auth()?.signOut()
 		} catch {
 			print("log out failed")
 		}
 	}
-	
+		
 	//login canceled
 
 }

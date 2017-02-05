@@ -11,7 +11,8 @@ import FirebaseAuth
 import UIKit
 
 protocol SocialMediaProvider {
-	func login(sender: UIViewController)
+	var type: LoginProvider { get }
+	func login(sender: UIViewController, session: MedleySession)
 	//func logout()
 	func isLoggedIn()->Bool
 }

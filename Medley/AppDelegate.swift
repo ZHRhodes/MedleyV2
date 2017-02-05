@@ -21,34 +21,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		FIRApp.configure()
+		FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
 		//FIRDatabase.database().persistenceEnabled = true // fix / read more into this
-
-		FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+		var initialLogInCheck: FIRAuthStateDidChangeListenerHandle!
+		initialLogInCheck = FIRAuth.auth()?.addStateDidChangeListener({ (auth, user) in
+			if user != nil {
+				self.loadMainStoryboard()
+			} else {
+				self.loadLoginStoryboard()
+			}
+			FIRAuth.auth()?.removeStateDidChangeListener(initialLogInCheck)
+		})
 		
 		FIRAuth.auth()?.addStateDidChangeListener({ (auth, user) in
-			if let user = user {
-				self.window = UIWindow(frame: UIScreen.main.bounds)
-				let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-				let viewController = storyboard.instantiateViewController(withIdentifier: "MainRootVC")
-				self.window?.rootViewController = viewController
-				self.window?.makeKeyAndVisible()
-			} else {
-				self.window = UIWindow(frame: UIScreen.main.bounds)
-				let storyboard = UIStoryboard.init(name: "Login", bundle: nil)
-				let viewController = storyboard.instantiateViewController(withIdentifier: "LoginRootVC") as! ViewController
-				let navigationController = UINavigationController.init(rootViewController: viewController)
-				self.window?.rootViewController = navigationController
-				self.window?.makeKeyAndVisible()
+			if user == nil {
+				self.loadLoginStoryboard()
 			}
 		})
+		
+		return true
+	}
+	
+	func loadMainStoryboard(){
 		self.window = UIWindow(frame: UIScreen.main.bounds)
 		let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
 		let viewController = storyboard.instantiateViewController(withIdentifier: "MainRootVC")
 		self.window?.rootViewController = viewController
 		self.window?.makeKeyAndVisible()
-		
-		return true
+	}
+	
+	func loadLoginStoryboard(){
+		self.window = UIWindow(frame: UIScreen.main.bounds)
+		let storyboard = UIStoryboard.init(name: "Login", bundle: nil)
+		let viewController = storyboard.instantiateViewController(withIdentifier: "LoginRootVC")
+		let navigationController = UINavigationController.init(rootViewController: viewController)
+		self.window?.rootViewController = navigationController
+		self.window?.makeKeyAndVisible()
 	}
 	
 	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {

@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1453B1591E0C72CF009116AF /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453B1581E0C72CF009116AF /* UsernameViewController.swift */; };
+		1453B15C1E0E5A7A009116AF /* FriendSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453B15B1E0E5A7A009116AF /* FriendSearchCell.swift */; };
+		1453B15F1E0E5C0A009116AF /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453B15E1E0E5C0A009116AF /* FriendSearchViewController.swift */; };
+		147026601E033158004EFE39 /* MedleySession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470265F1E033158004EFE39 /* MedleySession.swift */; };
+		147026621E033290004EFE39 /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147026611E033290004EFE39 /* LoginProvider.swift */; };
+		147026641E0335AD004EFE39 /* FacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147026631E0335AD004EFE39 /* FacebookManager.swift */; };
+		147026661E033649004EFE39 /* SocialMediaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147026651E033649004EFE39 /* SocialMediaProvider.swift */; };
+		147026681E049972004EFE39 /* MusicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147026671E049972004EFE39 /* MusicProvider.swift */; };
 		1485DD6B1E01B50B0055FD00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485DD6A1E01B50B0055FD00 /* AppDelegate.swift */; };
-		1485DD6D1E01B50B0055FD00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485DD6C1E01B50B0055FD00 /* ViewController.swift */; };
+		1485DD6D1E01B50B0055FD00 /* LoginRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485DD6C1E01B50B0055FD00 /* LoginRootViewController.swift */; };
 		1485DD701E01B50B0055FD00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1485DD6E1E01B50B0055FD00 /* Main.storyboard */; };
 		1485DD731E01B50B0055FD00 /* Medley.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1485DD711E01B50B0055FD00 /* Medley.xcdatamodeld */; };
 		1485DD751E01B50B0055FD00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1485DD741E01B50B0055FD00 /* Assets.xcassets */; };
@@ -18,6 +26,8 @@
 		1485DD9C1E01B5700055FD00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1485DD9B1E01B5700055FD00 /* GoogleService-Info.plist */; };
 		1485DD9D1E01B5700055FD00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1485DD9B1E01B5700055FD00 /* GoogleService-Info.plist */; };
 		1485DD9E1E01B5700055FD00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1485DD9B1E01B5700055FD00 /* GoogleService-Info.plist */; };
+		14C8AD7F1E0B3BCF00D990BF /* MainRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C8AD7E1E0B3BCF00D990BF /* MainRootVC.swift */; };
+		14DC21891E05C2DC00B621EE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DC21881E05C2DC00B621EE /* Login.storyboard */; };
 		333B9F1FFA3982E901469C99 /* Pods_MedleyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C376E0330318C2E9666E1B3 /* Pods_MedleyUITests.framework */; };
 		93505EC7AAD0C1C9194D76EE /* Pods_Medley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B203E2F9A20EA79CABC031B /* Pods_Medley.framework */; };
 		AF13BD57B46B2647A0F5F2A0 /* Pods_MedleyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BECD546836243CE9D3DCAA4 /* Pods_MedleyTests.framework */; };
@@ -42,10 +52,18 @@
 
 /* Begin PBXFileReference section */
 		08C1FFE4B8B7F7117F7811DC /* Pods-MedleyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedleyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedleyUITests/Pods-MedleyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1453B1581E0C72CF009116AF /* UsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
+		1453B15B1E0E5A7A009116AF /* FriendSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchCell.swift; sourceTree = "<group>"; };
+		1453B15E1E0E5C0A009116AF /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
 		1470265E1E01C469004EFE39 /* Medley.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Medley.entitlements; sourceTree = "<group>"; };
+		1470265F1E033158004EFE39 /* MedleySession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedleySession.swift; sourceTree = "<group>"; };
+		147026611E033290004EFE39 /* LoginProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
+		147026631E0335AD004EFE39 /* FacebookManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookManager.swift; sourceTree = "<group>"; };
+		147026651E033649004EFE39 /* SocialMediaProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaProvider.swift; sourceTree = "<group>"; };
+		147026671E049972004EFE39 /* MusicProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicProvider.swift; sourceTree = "<group>"; };
 		1485DD671E01B50B0055FD00 /* Medley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1485DD6A1E01B50B0055FD00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1485DD6C1E01B50B0055FD00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1485DD6C1E01B50B0055FD00 /* LoginRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRootViewController.swift; sourceTree = "<group>"; };
 		1485DD6F1E01B50B0055FD00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1485DD721E01B50B0055FD00 /* Medley.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medley.xcdatamodel; sourceTree = "<group>"; };
 		1485DD741E01B50B0055FD00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +76,8 @@
 		1485DD8D1E01B50B0055FD00 /* MedleyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedleyUITests.swift; sourceTree = "<group>"; };
 		1485DD8F1E01B50B0055FD00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1485DD9B1E01B5700055FD00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		14C8AD7E1E0B3BCF00D990BF /* MainRootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRootVC.swift; sourceTree = "<group>"; };
+		14DC21881E05C2DC00B621EE /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		1AAE07A0001705C05781F511 /* Pods-Medley.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medley.release.xcconfig"; path = "Pods/Target Support Files/Pods-Medley/Pods-Medley.release.xcconfig"; sourceTree = "<group>"; };
 		6BECD546836243CE9D3DCAA4 /* Pods_MedleyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedleyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B203E2F9A20EA79CABC031B /* Pods_Medley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Medley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +116,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1453B1501E0C708F009116AF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				14DC21881E05C2DC00B621EE /* Login.storyboard */,
+				1485DD6E1E01B50B0055FD00 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		1453B1511E0C70A5009116AF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1453B1571E0C71D1009116AF /* Models */,
+				1453B1561E0C715E009116AF /* Controllers */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		1453B1531E0C70EF009116AF /* MainRoot */ = {
+			isa = PBXGroup;
+			children = (
+				1453B15A1E0E5A54009116AF /* Controllers */,
+				1453B15D1E0E5A81009116AF /* Models */,
+			);
+			name = MainRoot;
+			sourceTree = "<group>";
+		};
+		1453B1561E0C715E009116AF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1485DD6C1E01B50B0055FD00 /* LoginRootViewController.swift */,
+				1453B1581E0C72CF009116AF /* UsernameViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1453B1571E0C71D1009116AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				147026631E0335AD004EFE39 /* FacebookManager.swift */,
+				147026651E033649004EFE39 /* SocialMediaProvider.swift */,
+				147026671E049972004EFE39 /* MusicProvider.swift */,
+				147026611E033290004EFE39 /* LoginProvider.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1453B15A1E0E5A54009116AF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				14C8AD7E1E0B3BCF00D990BF /* MainRootVC.swift */,
+				1453B15E1E0E5C0A009116AF /* FriendSearchViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1453B15D1E0E5A81009116AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1453B15B1E0E5A7A009116AF /* FriendSearchCell.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		1485DD5E1E01B50B0055FD00 = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +207,10 @@
 			children = (
 				1470265E1E01C469004EFE39 /* Medley.entitlements */,
 				1485DD6A1E01B50B0055FD00 /* AppDelegate.swift */,
-				1485DD6C1E01B50B0055FD00 /* ViewController.swift */,
-				1485DD6E1E01B50B0055FD00 /* Main.storyboard */,
+				1470265F1E033158004EFE39 /* MedleySession.swift */,
+				1453B1511E0C70A5009116AF /* Login */,
+				1453B1531E0C70EF009116AF /* MainRoot */,
+				1453B1501E0C708F009116AF /* Storyboards */,
 				1485DD741E01B50B0055FD00 /* Assets.xcassets */,
 				1485DD761E01B50B0055FD00 /* LaunchScreen.storyboard */,
 				1485DD791E01B50B0055FD00 /* Info.plist */,
@@ -301,6 +387,7 @@
 				1485DD781E01B50B0055FD00 /* LaunchScreen.storyboard in Resources */,
 				1485DD751E01B50B0055FD00 /* Assets.xcassets in Resources */,
 				1485DD9C1E01B5700055FD00 /* GoogleService-Info.plist in Resources */,
+				14DC21891E05C2DC00B621EE /* Login.storyboard in Resources */,
 				1485DD701E01B50B0055FD00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,9 +538,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1485DD6D1E01B50B0055FD00 /* ViewController.swift in Sources */,
+				1453B1591E0C72CF009116AF /* UsernameViewController.swift in Sources */,
+				1485DD6D1E01B50B0055FD00 /* LoginRootViewController.swift in Sources */,
+				147026621E033290004EFE39 /* LoginProvider.swift in Sources */,
+				147026681E049972004EFE39 /* MusicProvider.swift in Sources */,
+				1453B15F1E0E5C0A009116AF /* FriendSearchViewController.swift in Sources */,
 				1485DD731E01B50B0055FD00 /* Medley.xcdatamodeld in Sources */,
+				147026641E0335AD004EFE39 /* FacebookManager.swift in Sources */,
+				147026601E033158004EFE39 /* MedleySession.swift in Sources */,
+				147026661E033649004EFE39 /* SocialMediaProvider.swift in Sources */,
+				14C8AD7F1E0B3BCF00D990BF /* MainRootVC.swift in Sources */,
 				1485DD6B1E01B50B0055FD00 /* AppDelegate.swift in Sources */,
+				1453B15C1E0E5A7A009116AF /* FriendSearchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
