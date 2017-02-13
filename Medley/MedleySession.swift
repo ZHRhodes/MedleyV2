@@ -16,12 +16,17 @@ protocol FirebaseLoginResponseDelegate {
 }
 
 class MedleySession {
+	static let sharedInstance = MedleySession()
 	
 	private(set) var isNewUser: Bool?
 	var loginResponseDelegate: FirebaseLoginResponseDelegate?
 	var ref: FIRDatabaseReference = FIRDatabase.database().reference()
+	var musicProvider: MusicProvider?
+	
+	private init(){}
 	
 	//this is a lot of coupling!
+	//check if already logged in?
 	func login(withProvider provider: SocialMediaProvider, sender: UIViewController, loginResponseDelegate: FirebaseLoginResponseDelegate){
 		self.loginResponseDelegate = loginResponseDelegate
 		provider.login(sender: sender, session: self)
@@ -51,5 +56,9 @@ class MedleySession {
 	}
 		
 	//login canceled
+	
+	func login(withMusicProvider provider: MusicProvider){
+		self.musicProvider = provider
+	}
 
 }

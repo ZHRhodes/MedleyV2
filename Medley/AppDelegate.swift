@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func loadMainStoryboard(){
 		self.window = UIWindow(frame: UIScreen.main.bounds)
 		let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-		let viewController = storyboard.instantiateViewController(withIdentifier: "MainRootVC")
+		let viewController = storyboard.instantiateViewController(withIdentifier: "MainTabController")
 		self.window?.rootViewController = viewController
 		self.window?.makeKeyAndVisible()
 	}

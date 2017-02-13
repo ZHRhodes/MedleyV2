@@ -19,7 +19,7 @@ class MainRootVC: UIViewController {
 	}
 	
 	@IBAction func addFriendsTapped(_ sender: Any) {
-		performSegue(withIdentifier: "maintofriendsearch", sender: self)
+		performSegue(withIdentifier: SegueIdentifiers.MainToFriendSearch.rawValue, sender: self)
 	}
 	
 }

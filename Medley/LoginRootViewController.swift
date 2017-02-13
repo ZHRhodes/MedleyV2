@@ -18,7 +18,7 @@ class LoginRootViewController: UIViewController, FirebaseLoginResponseDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		print(FBSDKAccessToken.current().tokenString)
+		//print(FBSDKAccessToken.current().tokenString)
 		//if(MedleySession.shared.socialMediaProvider.isLoggedIn()){
 		//	print("already logged on!")
 		//}
@@ -52,13 +52,13 @@ class LoginRootViewController: UIViewController, FirebaseLoginResponseDelegate {
 	}
 
 	@IBAction func facebookLoginTapped(_ sender: Any) {
-		MedleySession().login(withProvider: FacebookManager(), sender: self, loginResponseDelegate: self)
+		MedleySession.sharedInstance.login(withProvider: FacebookManager(), sender: self, loginResponseDelegate: self) //sharedinstance
 	}
 	
 	func handleUserLogin(isNewUser: Bool) {
 		print("IS NEW USER??? \(isNewUser)")
-		if(true){//isNewUser){
-			performSegue(withIdentifier: "loginroottousername", sender: self)
+		if(isNewUser){//isNewUser){
+			performSegue(withIdentifier: SegueIdentifiers.LoginRootToUsername.rawValue, sender: self)
 		}else{
 			//performSegue(withIdentifier: "logintomainroot", sender: self)
 

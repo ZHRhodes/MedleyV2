@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol MusicProvider {
-	func search(byTitle title: String)
+	func search(byTitle title: String)->Observable<Song>
 }
