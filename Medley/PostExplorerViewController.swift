@@ -27,9 +27,18 @@ class PostExplorerViewController: UIViewController {
 		songName.heroID = post.heroID + "song"
 		artistName.heroID = post.heroID + "artist"
 		postPlayerView.heroID = post.heroID + "bg"
+		
+		let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(PostExplorerViewController.handleSwipes(sender:)))
+		downSwipe.direction = .down
+		view.addGestureRecognizer(downSwipe)
 	}
 	
 	func set(post: MusicPostViewModel){
 		self.post = post
 	}
+	
+	func handleSwipes(sender:UISwipeGestureRecognizer){
+		hero_unwindToRootViewController()
+	}
+	
 }
