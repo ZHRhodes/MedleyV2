@@ -11,6 +11,7 @@
 		14441DF71E517925004F2F45 /* MusicPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14441DF61E517925004F2F45 /* MusicPostViewModel.swift */; };
 		14441DF91E51851A004F2F45 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14441DF81E51851A004F2F45 /* FeedViewModel.swift */; };
 		14441DFD1E518A72004F2F45 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14441DFC1E518A72004F2F45 /* DataProvider.swift */; };
+		14441E001E528020004F2F45 /* PostPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14441DFF1E528020004F2F45 /* PostPlayerView.swift */; };
 		1453B1591E0C72CF009116AF /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453B1581E0C72CF009116AF /* UsernameViewController.swift */; };
 		1453B15C1E0E5A7A009116AF /* FriendSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453B15B1E0E5A7A009116AF /* FriendSearchCell.swift */; };
 		1453B15F1E0E5C0A009116AF /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453B15E1E0E5C0A009116AF /* FriendSearchViewController.swift */; };
@@ -41,6 +42,13 @@
 		14A17B131E49CA49000D3146 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B121E49CA49000D3146 /* FeedViewController.swift */; };
 		14C8AD7F1E0B3BCF00D990BF /* MainRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C8AD7E1E0B3BCF00D990BF /* MainRootVC.swift */; };
 		14DC21891E05C2DC00B621EE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DC21881E05C2DC00B621EE /* Login.storyboard */; };
+		14E1D5E41E52990D00A16F95 /* FeedExpandedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E1D5E31E52990D00A16F95 /* FeedExpandedCell.swift */; };
+		14E1D5E81E52ADD600A16F95 /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E1D5E71E52ADD600A16F95 /* CellIdentifiers.swift */; };
+		14E1D5EA1E52B05700A16F95 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E1D5E91E52B05700A16F95 /* FeedCell.swift */; };
+		14E1D5EC1E53B48A00A16F95 /* PostExplorer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E1D5EB1E53B48A00A16F95 /* PostExplorer.xib */; };
+		14E1D5F01E53BC2900A16F95 /* PostExplorer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E1D5EF1E53BC2900A16F95 /* PostExplorer.storyboard */; };
+		14E1D5F21E53BEEE00A16F95 /* UIKit+Medley.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E1D5F11E53BEEE00A16F95 /* UIKit+Medley.swift */; };
+		14E1D5F41E53F01F00A16F95 /* PostExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E1D5F31E53F01F00A16F95 /* PostExplorerViewController.swift */; };
 		333B9F1FFA3982E901469C99 /* Pods_MedleyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C376E0330318C2E9666E1B3 /* Pods_MedleyUITests.framework */; };
 		93505EC7AAD0C1C9194D76EE /* Pods_Medley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B203E2F9A20EA79CABC031B /* Pods_Medley.framework */; };
 		AF13BD57B46B2647A0F5F2A0 /* Pods_MedleyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BECD546836243CE9D3DCAA4 /* Pods_MedleyTests.framework */; };
@@ -69,6 +77,7 @@
 		14441DF61E517925004F2F45 /* MusicPostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPostViewModel.swift; sourceTree = "<group>"; };
 		14441DF81E51851A004F2F45 /* FeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		14441DFC1E518A72004F2F45 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		14441DFF1E528020004F2F45 /* PostPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostPlayerView.swift; sourceTree = "<group>"; };
 		1453B1581E0C72CF009116AF /* UsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
 		1453B15B1E0E5A7A009116AF /* FriendSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchCell.swift; sourceTree = "<group>"; };
 		1453B15E1E0E5C0A009116AF /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +113,13 @@
 		14A17B121E49CA49000D3146 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		14C8AD7E1E0B3BCF00D990BF /* MainRootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRootVC.swift; sourceTree = "<group>"; };
 		14DC21881E05C2DC00B621EE /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		14E1D5E31E52990D00A16F95 /* FeedExpandedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedExpandedCell.swift; sourceTree = "<group>"; };
+		14E1D5E71E52ADD600A16F95 /* CellIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
+		14E1D5E91E52B05700A16F95 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		14E1D5EB1E53B48A00A16F95 /* PostExplorer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostExplorer.xib; sourceTree = "<group>"; };
+		14E1D5EF1E53BC2900A16F95 /* PostExplorer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostExplorer.storyboard; sourceTree = "<group>"; };
+		14E1D5F11E53BEEE00A16F95 /* UIKit+Medley.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Medley.swift"; sourceTree = "<group>"; };
+		14E1D5F31E53F01F00A16F95 /* PostExplorerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostExplorerViewController.swift; sourceTree = "<group>"; };
 		1AAE07A0001705C05781F511 /* Pods-Medley.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medley.release.xcconfig"; path = "Pods/Target Support Files/Pods-Medley/Pods-Medley.release.xcconfig"; sourceTree = "<group>"; };
 		6BECD546836243CE9D3DCAA4 /* Pods_MedleyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedleyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B203E2F9A20EA79CABC031B /* Pods_Medley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Medley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +164,8 @@
 				14A17B121E49CA49000D3146 /* FeedViewController.swift */,
 				14441DF81E51851A004F2F45 /* FeedViewModel.swift */,
 				14441DF41E517878004F2F45 /* FeedCollapsedCell.swift */,
+				14E1D5E31E52990D00A16F95 /* FeedExpandedCell.swift */,
+				14E1D5E91E52B05700A16F95 /* FeedCell.swift */,
 			);
 			name = Feed;
 			sourceTree = "<group>";
@@ -292,6 +310,12 @@
 				14A17B101E49810F000D3146 /* MockDataProvider.swift */,
 				14441DFA1E51851F004F2F45 /* Feed */,
 				14441DFC1E518A72004F2F45 /* DataProvider.swift */,
+				14441DFF1E528020004F2F45 /* PostPlayerView.swift */,
+				14E1D5E71E52ADD600A16F95 /* CellIdentifiers.swift */,
+				14E1D5EB1E53B48A00A16F95 /* PostExplorer.xib */,
+				14E1D5EF1E53BC2900A16F95 /* PostExplorer.storyboard */,
+				14E1D5F11E53BEEE00A16F95 /* UIKit+Medley.swift */,
+				14E1D5F31E53F01F00A16F95 /* PostExplorerViewController.swift */,
 			);
 			name = New;
 			sourceTree = "<group>";
@@ -339,12 +363,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1485DD921E01B50B0055FD00 /* Build configuration list for PBXNativeTarget "Medley" */;
 			buildPhases = (
+				9C2A8E0DFD8106368936C2E4 /* [CP] Check Pods Manifest.lock */,
 				2CB064A25A3CFF2DC70C4669 /* [CP] Check Pods Manifest.lock */,
 				1485DD631E01B50B0055FD00 /* Sources */,
 				1485DD641E01B50B0055FD00 /* Frameworks */,
 				1485DD651E01B50B0055FD00 /* Resources */,
 				702AC69E72BDE696AC2428F3 /* [CP] Embed Pods Frameworks */,
 				AE5B811791E96287BD113638 /* [CP] Copy Pods Resources */,
+				C0D1B491CCAB3264DB94BCD1 /* 📦 Embed Pods Frameworks */,
+				B914532BC1670FE6337361DC /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -359,12 +386,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1485DD951E01B50B0055FD00 /* Build configuration list for PBXNativeTarget "MedleyTests" */;
 			buildPhases = (
+				120C83E80B13F508C187DE58 /* [CP] Check Pods Manifest.lock */,
 				90E94106F56FE327727A955F /* [CP] Check Pods Manifest.lock */,
 				1485DD7A1E01B50B0055FD00 /* Sources */,
 				1485DD7B1E01B50B0055FD00 /* Frameworks */,
 				1485DD7C1E01B50B0055FD00 /* Resources */,
 				5885CA683D7F134BE4B4B88F /* [CP] Embed Pods Frameworks */,
 				C0CE81BAC3A43C98E66DB651 /* [CP] Copy Pods Resources */,
+				B0BAE7CA1818A45B77BD9B28 /* 📦 Embed Pods Frameworks */,
+				E71A4CCE8DC5EC7CC26C35A1 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -380,12 +410,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1485DD981E01B50B0055FD00 /* Build configuration list for PBXNativeTarget "MedleyUITests" */;
 			buildPhases = (
+				6AEBF74E28BDFE8DF895A212 /* [CP] Check Pods Manifest.lock */,
 				084BFBD941EB4C663C6B6EC4 /* [CP] Check Pods Manifest.lock */,
 				1485DD851E01B50B0055FD00 /* Sources */,
 				1485DD861E01B50B0055FD00 /* Frameworks */,
 				1485DD871E01B50B0055FD00 /* Resources */,
 				A442F069C3D6A45AE45E0AB3 /* [CP] Copy Pods Resources */,
 				8CE1EF1EF7E2F79499A56EBE /* [CP] Embed Pods Frameworks */,
+				A3B21C616632FD9B9E563E81 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -458,8 +490,10 @@
 			files = (
 				1485DD781E01B50B0055FD00 /* LaunchScreen.storyboard in Resources */,
 				1485DD751E01B50B0055FD00 /* Assets.xcassets in Resources */,
+				14E1D5F01E53BC2900A16F95 /* PostExplorer.storyboard in Resources */,
 				1485DD9C1E01B5700055FD00 /* GoogleService-Info.plist in Resources */,
 				14DC21891E05C2DC00B621EE /* Login.storyboard in Resources */,
+				14E1D5EC1E53B48A00A16F95 /* PostExplorer.xib in Resources */,
 				1485DD701E01B50B0055FD00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +518,21 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		084BFBD941EB4C663C6B6EC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		120C83E80B13F508C187DE58 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -526,6 +575,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MedleyTests/Pods-MedleyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AEBF74E28BDFE8DF895A212 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		702AC69E72BDE696AC2428F3 /* [CP] Embed Pods Frameworks */ = {
@@ -573,6 +637,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		9C2A8E0DFD8106368936C2E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A3B21C616632FD9B9E563E81 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MedleyUITests/Pods-MedleyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A442F069C3D6A45AE45E0AB3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -603,6 +697,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Medley/Pods-Medley-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B0BAE7CA1818A45B77BD9B28 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MedleyTests/Pods-MedleyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B914532BC1670FE6337361DC /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Medley/Pods-Medley-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C0CE81BAC3A43C98E66DB651 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -611,6 +735,36 @@
 			inputPaths = (
 			);
 			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MedleyTests/Pods-MedleyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0D1B491CCAB3264DB94BCD1 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Medley/Pods-Medley-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E71A4CCE8DC5EC7CC26C35A1 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,6 +784,7 @@
 				1453B1591E0C72CF009116AF /* UsernameViewController.swift in Sources */,
 				1485DD6D1E01B50B0055FD00 /* LoginRootViewController.swift in Sources */,
 				14A17B0C1E494AB1000D3146 /* MockMusicProvider.swift in Sources */,
+				14E1D5EA1E52B05700A16F95 /* FeedCell.swift in Sources */,
 				14441DF71E517925004F2F45 /* MusicPostViewModel.swift in Sources */,
 				147026621E033290004EFE39 /* LoginProvider.swift in Sources */,
 				147026681E049972004EFE39 /* MusicProvider.swift in Sources */,
@@ -637,11 +792,15 @@
 				14A17B0F1E497823000D3146 /* MusicPost.swift in Sources */,
 				1485DD731E01B50B0055FD00 /* Medley.xcdatamodeld in Sources */,
 				14A17B061E494459000D3146 /* User.swift in Sources */,
+				14E1D5E41E52990D00A16F95 /* FeedExpandedCell.swift in Sources */,
 				14441DF51E517878004F2F45 /* FeedCollapsedCell.swift in Sources */,
 				14A17B081E49454D000D3146 /* UserViewModel.swift in Sources */,
 				14441DF91E51851A004F2F45 /* FeedViewModel.swift in Sources */,
+				14441E001E528020004F2F45 /* PostPlayerView.swift in Sources */,
 				14A17B111E49810F000D3146 /* MockDataProvider.swift in Sources */,
 				14A17B131E49CA49000D3146 /* FeedViewController.swift in Sources */,
+				14E1D5F41E53F01F00A16F95 /* PostExplorerViewController.swift in Sources */,
+				14E1D5F21E53BEEE00A16F95 /* UIKit+Medley.swift in Sources */,
 				14441DFD1E518A72004F2F45 /* DataProvider.swift in Sources */,
 				147026641E0335AD004EFE39 /* FacebookManager.swift in Sources */,
 				14A17B0A1E494612000D3146 /* SegueIdentifiers.swift in Sources */,
@@ -649,6 +808,7 @@
 				147026661E033649004EFE39 /* SocialMediaProvider.swift in Sources */,
 				14C8AD7F1E0B3BCF00D990BF /* MainRootVC.swift in Sources */,
 				1485DD6B1E01B50B0055FD00 /* AppDelegate.swift in Sources */,
+				14E1D5E81E52ADD600A16F95 /* CellIdentifiers.swift in Sources */,
 				1453B15C1E0E5A7A009116AF /* FriendSearchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,18 +1,18 @@
 //
-//  FeedCollapsedCell.swift
+//  FeedExpandedCell.swift
 //  Medley
 //
-//  Created by Zack Rhodes on 2/12/17.
+//  Created by Zack Rhodes on 2/13/17.
 //  Copyright © 2017 zhrhodes. All rights reserved.
 //
 
 import Foundation
 import RxSwift
-import RxCocoa
 import SDWebImage
+import UIKit
 import Hero
 
-class FeedCollapsedCell: UITableViewCell, FeedCell {
+class FeedExpandedCell: UITableViewCell, FeedCell {
 	
 	var viewModel = PublishSubject<MusicPostViewModel>()
 	
@@ -30,14 +30,15 @@ class FeedCollapsedCell: UITableViewCell, FeedCell {
 	
 	@IBOutlet var postBackground: PostPlayerView!
 	
-	@IBOutlet var albumArt: UIButton!
 	@IBOutlet var profilePic: UIImageView!
 	@IBOutlet var username: UILabel!
 	@IBOutlet var timeSincePost: UILabel!
-
+	
+	
+	@IBOutlet var albumArt: UIButton!
 	@IBOutlet var songName: UILabel!
 	@IBOutlet var artist: UILabel!
-
+	
 	
 	let disposeBag = DisposeBag()
 	
@@ -46,6 +47,7 @@ class FeedCollapsedCell: UITableViewCell, FeedCell {
 		setup()
 	}
 	
+	/*what goes in the model!?*/
 	private func setup() {
 		viewModel.subscribe(onNext: { [weak self] viewModel in
 			self?.albumArt.heroID = viewModel.heroID
@@ -63,7 +65,6 @@ class FeedCollapsedCell: UITableViewCell, FeedCell {
 		artTap = albumArt.rx.tap.map{ return self.curViewModel }
 
 	}
-	
 	
 	
 }

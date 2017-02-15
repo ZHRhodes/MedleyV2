@@ -13,6 +13,8 @@ target 'Medley' do
   pod 'FBSDKLoginKit'
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
+  pod 'SDWebImage'
+  pod 'Hero'
 
   target 'MedleyTests' do
     inherit! :search_paths
