@@ -23,10 +23,10 @@ class PostExplorerViewController: UIViewController {
 		songName.text = post.song?.name
 		artistName.text = post.song?.artist
 		
-		albumArt.heroID = post.heroID
-		songName.heroID = post.heroID + "song"
-		artistName.heroID = post.heroID + "artist"
-		postPlayerView.heroID = post.heroID + "bg"
+		albumArt.heroID = post.heroID.album
+		songName.heroID = post.heroID.song
+		artistName.heroID = post.heroID.artist
+		postPlayerView.heroID = post.heroID.bg
 		
 		let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(PostExplorerViewController.handleSwipes(sender:)))
 		downSwipe.direction = .down

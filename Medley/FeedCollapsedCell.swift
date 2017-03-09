@@ -16,6 +16,8 @@ class FeedCollapsedCell: UITableViewCell, FeedCell {
 	
 	var viewModel = PublishSubject<MusicPostViewModel>()
 	
+	var subscribed: Bool = false
+	
 	var artTap: Observable<MusicPostViewModel>!
 	
 	func getArtTaps() -> Observable<MusicPostViewModel> {
@@ -43,15 +45,15 @@ class FeedCollapsedCell: UITableViewCell, FeedCell {
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		setup()
+		setupRx()
 	}
 	
-	private func setup() {
+	private func setupRx() {
 		viewModel.subscribe(onNext: { [weak self] viewModel in
-			self?.albumArt.heroID = viewModel.heroID
-			self?.songName.heroID = viewModel.heroID + "song"
-			self?.artist.heroID = viewModel.heroID + "artist"
-			self?.postBackground.heroID = viewModel.heroID + "bg"
+			self?.albumArt.heroID = viewModel.heroID.album
+			self?.songName.heroID = viewModel.heroID.song
+			self?.artist.heroID = viewModel.heroID.artist
+			self?.postBackground.heroID = viewModel.heroID.bg
 			self?.curViewModel = viewModel
 			self?.username.text = viewModel.user?.username
 			self?.songName.text = viewModel.song?.name

@@ -53,11 +53,15 @@ class FeedViewController: UITableViewController {
 				let expand = element.viewModel.shouldExpandByLikes(param: 20)
 				cell = expand ? tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.FeedExpandedCell.rawValue, for: indexPath) as! FeedExpandedCell : tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.FeedCollapsedCell.rawValue, for: indexPath) as! FeedCollapsedCell
 				cell.setViewModel(newViewModel: element.viewModel)
-				cell.getArtTaps().subscribe(onNext: { [weak self] post in
-					self?.showPostExplorer(post: post)
-				}).addDisposableTo(self.disposeBag)
+				if(!cell.subscribed){
+					cell.getArtTaps().subscribe(onNext: { [weak self] post in
+						self?.showPostExplorer(post: post)
+					}).addDisposableTo(self.disposeBag)
+					cell.subscribed = true
+				}
 				return expand ? cell as! FeedExpandedCell : cell as! FeedCollapsedCell
 			}
 			.addDisposableTo(disposeBag)
 	}
+
 }
