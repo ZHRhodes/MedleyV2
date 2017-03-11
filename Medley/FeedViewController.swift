@@ -47,7 +47,6 @@ class FeedViewController: UITableViewController {
 		viewModel
 			.requestFeedPosts() //will this get new info/updates? what's pushing here?
 			.bindTo(feedTableView.rx.items) { (tableView, row, element) in
-				print(element.viewModel.heroID)
 				let indexPath = IndexPath(row: row, section: 0)
 				let cell: FeedCell!
 				let expand = element.viewModel.shouldExpandByLikes(param: 20)
@@ -56,6 +55,9 @@ class FeedViewController: UITableViewController {
 				if(!cell.subscribed){
 					cell.getArtTaps().subscribe(onNext: { [weak self] post in
 						self?.showPostExplorer(post: post)
+					}).addDisposableTo(self.disposeBag)
+					cell.getProfileTaps().subscribe(onNext: { [weak self] user in
+						print(user.username ?? "no username")
 					}).addDisposableTo(self.disposeBag)
 					cell.subscribed = true
 				}
