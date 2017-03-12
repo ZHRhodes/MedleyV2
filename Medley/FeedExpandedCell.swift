@@ -61,6 +61,9 @@ class FeedExpandedCell: UITableViewCell, FeedCell {
 			self?.songName.heroID = viewModel.heroID.song
 			self?.artist.heroID = viewModel.heroID.artist
 			self?.postBackground.heroID = viewModel.heroID.bg
+			self?.username.heroID = viewModel.user?.viewModel.heroID.username
+			self?.profilePic.heroID = viewModel.user?.viewModel.heroID.profilePic
+			
 			self?.curViewModel = viewModel
 			self?.username.text = viewModel.user?.username
 			self?.songName.text = viewModel.song?.name
@@ -74,9 +77,8 @@ class FeedExpandedCell: UITableViewCell, FeedCell {
 		artTap = albumArt.rx.tap.map{ return self.curViewModel }
 		profileTap = PublishSubject<User>()
 		
-		let tap = UITapGestureRecognizer(target: self, action: #selector(FeedExpandedCell.profileTapped))
-		profilePic.isUserInteractionEnabled = true
-		profilePic.addGestureRecognizer(tap)
+		profilePic.addTapRecognizer(sender: self, sel: #selector(FeedExpandedCell.profileTapped))
+		username.addTapRecognizer(sender: self, sel: #selector(FeedExpandedCell.profileTapped))
 
 	}
 	

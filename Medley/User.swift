@@ -13,16 +13,22 @@ struct User {
 	var username: String?
 	var fullName: String?
 	var profilePicture: URL?
+	var followers: Int = 0
+	var following: Int = 0
+	var jams: Int = 0
 	
 	lazy var viewModel: UserViewModel = {
 		return UserViewModel(user: self)
 	}()
 	
-	init(id: String, username: String, fullName: String, profilePicture: String){
+	init(id: String, username: String, fullName: String, profilePicture: String, followers: Int, following: Int, jams: Int){
 		self.id = id
 		self.username = username
 		self.fullName = fullName
 		self.profilePicture = URL(string: profilePicture)
+		self.followers = followers
+		self.following = following
+		self.jams = jams
 	}
 }
 

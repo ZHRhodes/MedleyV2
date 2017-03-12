@@ -659,6 +659,88 @@
             </objects>
             <point key="canvasLocation" x="663" y="-2279"/>
         </scene>
+        <!--User Profile View Controller-->
+        <scene sceneID="WvQ-ay-B5U">
+            <objects>
+                <viewController storyboardIdentifier="UserProfile" id="ZkX-9a-crN" customClass="UserProfileViewController" customModule="Medley" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VFM-7b-njL"/>
+                        <viewControllerLayoutGuide type="bottom" id="TT5-HR-6Qe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZO5-r0-dwH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nCA-dq-mv4">
+                                <rect key="frame" x="16" y="28" width="106" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="106" id="H9h-Zu-gAY"/>
+                                    <constraint firstAttribute="width" constant="106" id="VXc-Hc-EaP"/>
+                                    <constraint firstAttribute="height" constant="107" id="f5q-P9-SRt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rB-ZD-zXI">
+                                <rect key="frame" x="150" y="55" width="103" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="87M-7b-Gxd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7A-l3-6SH">
+                                <rect key="frame" x="150" y="84" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jams:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNB-6g-WIC">
+                                <rect key="frame" x="150" y="113" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hw-ez-8zb">
+                                <rect key="frame" x="150" y="28" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nCA-dq-mv4" firstAttribute="top" secondItem="5rB-ZD-zXI" secondAttribute="top" constant="-27" id="2Va-Xt-MU8"/>
+                            <constraint firstItem="5rB-ZD-zXI" firstAttribute="leading" secondItem="nCA-dq-mv4" secondAttribute="trailing" constant="28" id="7SR-wK-wmp"/>
+                            <constraint firstItem="5rB-ZD-zXI" firstAttribute="leading" secondItem="G7A-l3-6SH" secondAttribute="leading" id="8X4-W0-w6Q"/>
+                            <constraint firstItem="nCA-dq-mv4" firstAttribute="leading" secondItem="ZO5-r0-dwH" secondAttribute="leadingMargin" id="MTm-vS-Kga"/>
+                            <constraint firstItem="nCA-dq-mv4" firstAttribute="top" secondItem="VFM-7b-njL" secondAttribute="bottom" constant="8" id="U61-yI-Dkb"/>
+                            <constraint firstItem="5rB-ZD-zXI" firstAttribute="trailing" secondItem="G7A-l3-6SH" secondAttribute="trailing" id="W8h-c3-UT5"/>
+                            <constraint firstItem="G7A-l3-6SH" firstAttribute="trailing" secondItem="nNB-6g-WIC" secondAttribute="trailing" id="X0H-1V-G3o"/>
+                            <constraint firstItem="nCA-dq-mv4" firstAttribute="bottom" secondItem="nNB-6g-WIC" secondAttribute="bottom" constant="1" id="n9A-fp-WIq"/>
+                            <constraint firstItem="nNB-6g-WIC" firstAttribute="top" secondItem="G7A-l3-6SH" secondAttribute="bottom" constant="8" id="on2-h2-j6Y"/>
+                            <constraint firstItem="G7A-l3-6SH" firstAttribute="leading" secondItem="nNB-6g-WIC" secondAttribute="leading" id="rLf-zl-1jl"/>
+                            <constraint firstItem="nCA-dq-mv4" firstAttribute="centerY" secondItem="G7A-l3-6SH" secondAttribute="centerY" constant="-13" id="wLU-0P-2gq"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="followersLabel" destination="5rB-ZD-zXI" id="Bes-S8-ba7"/>
+                        <outlet property="followingLabel" destination="G7A-l3-6SH" id="Xyg-zS-ao1"/>
+                        <outlet property="jamsLabel" destination="nNB-6g-WIC" id="X1Y-rf-95i"/>
+                        <outlet property="userPic" destination="nCA-dq-mv4" id="MfO-u2-oDv"/>
+                        <outlet property="usernameLabel" destination="0Hw-ez-8zb" id="Q1j-Hd-iEL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybJ-Vh-bk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1636" y="-2279.0104947526238"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ic_keyboard_arrow_down" width="24" height="24"/>

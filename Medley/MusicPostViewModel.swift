@@ -8,14 +8,6 @@
 
 import Foundation
 
-class HeroID {
-	private let id = String(arc4random())
-	lazy var song: String = {return self.id + "song"}()
-	lazy var album: String = {return self.id + "album"}()
-	lazy var artist: String = {return self.id + "artist"}()
-	lazy var bg: String = {return self.id + "bg"}()
-}
-
 class MusicPostViewModel {
 	var user: User?
 	var song: Song?

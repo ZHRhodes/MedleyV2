@@ -16,6 +16,7 @@ struct Constants{
 	
 	struct StoryboardIDs {
 		static let PostExplorer = "PostExplorer"
+		static let UserProfile = "UserProfile"
 	}
 	
 }

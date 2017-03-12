@@ -21,8 +21,13 @@
 		147026661E033649004EFE39 /* SocialMediaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147026651E033649004EFE39 /* SocialMediaProvider.swift */; };
 		147026681E049972004EFE39 /* MusicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147026671E049972004EFE39 /* MusicProvider.swift */; };
 		147E40391E72394300799609 /* UIImage+Medley.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E40381E72394300799609 /* UIImage+Medley.swift */; };
-		147E403D1E725DD500799609 /* UserPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147E403C1E725DD500799609 /* UserPage.storyboard */; };
 		147E403F1E74F79100799609 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E403E1E74F79100799609 /* Constants.swift */; };
+		147E40411E74FF7700799609 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E40401E74FF7700799609 /* UserProfileViewController.swift */; };
+		147E40451E75132200799609 /* PostExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E40441E75132200799609 /* PostExplorerViewModel.swift */; };
+		147E40481E7520F800799609 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E40471E7520F800799609 /* UserProfileViewModel.swift */; };
+		147E404A1E75257A00799609 /* MedleyBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E40491E75257A00799609 /* MedleyBaseViewController.swift */; };
+		147E404C1E75C84100799609 /* UIView+Medley.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E404B1E75C84100799609 /* UIView+Medley.swift */; };
+		147E404F1E75CD8D00799609 /* HeroID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E404E1E75CD8D00799609 /* HeroID.swift */; };
 		1485DD6B1E01B50B0055FD00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485DD6A1E01B50B0055FD00 /* AppDelegate.swift */; };
 		1485DD6D1E01B50B0055FD00 /* LoginRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485DD6C1E01B50B0055FD00 /* LoginRootViewController.swift */; };
 		1485DD701E01B50B0055FD00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1485DD6E1E01B50B0055FD00 /* Main.storyboard */; };
@@ -46,7 +51,6 @@
 		14C8AD7F1E0B3BCF00D990BF /* MainRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C8AD7E1E0B3BCF00D990BF /* MainRootVC.swift */; };
 		14DC21891E05C2DC00B621EE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DC21881E05C2DC00B621EE /* Login.storyboard */; };
 		14E1D5E41E52990D00A16F95 /* FeedExpandedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E1D5E31E52990D00A16F95 /* FeedExpandedCell.swift */; };
-		14E1D5E81E52ADD600A16F95 /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E1D5E71E52ADD600A16F95 /* CellIdentifiers.swift */; };
 		14E1D5EA1E52B05700A16F95 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E1D5E91E52B05700A16F95 /* FeedCell.swift */; };
 		14E1D5EC1E53B48A00A16F95 /* PostExplorer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E1D5EB1E53B48A00A16F95 /* PostExplorer.xib */; };
 		14E1D5F01E53BC2900A16F95 /* PostExplorer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E1D5EF1E53BC2900A16F95 /* PostExplorer.storyboard */; };
@@ -91,8 +95,13 @@
 		147026651E033649004EFE39 /* SocialMediaProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaProvider.swift; sourceTree = "<group>"; };
 		147026671E049972004EFE39 /* MusicProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicProvider.swift; sourceTree = "<group>"; };
 		147E40381E72394300799609 /* UIImage+Medley.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Medley.swift"; sourceTree = "<group>"; };
-		147E403C1E725DD500799609 /* UserPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserPage.storyboard; sourceTree = "<group>"; };
 		147E403E1E74F79100799609 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		147E40401E74FF7700799609 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		147E40441E75132200799609 /* PostExplorerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostExplorerViewModel.swift; sourceTree = "<group>"; };
+		147E40471E7520F800799609 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		147E40491E75257A00799609 /* MedleyBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedleyBaseViewController.swift; sourceTree = "<group>"; };
+		147E404B1E75C84100799609 /* UIView+Medley.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Medley.swift"; sourceTree = "<group>"; };
+		147E404E1E75CD8D00799609 /* HeroID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroID.swift; sourceTree = "<group>"; };
 		1485DD671E01B50B0055FD00 /* Medley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1485DD6A1E01B50B0055FD00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1485DD6C1E01B50B0055FD00 /* LoginRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRootViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +129,6 @@
 		14C8AD7E1E0B3BCF00D990BF /* MainRootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRootVC.swift; sourceTree = "<group>"; };
 		14DC21881E05C2DC00B621EE /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		14E1D5E31E52990D00A16F95 /* FeedExpandedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedExpandedCell.swift; sourceTree = "<group>"; };
-		14E1D5E71E52ADD600A16F95 /* CellIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
 		14E1D5E91E52B05700A16F95 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		14E1D5EB1E53B48A00A16F95 /* PostExplorer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostExplorer.xib; sourceTree = "<group>"; };
 		14E1D5EF1E53BC2900A16F95 /* PostExplorer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostExplorer.storyboard; sourceTree = "<group>"; };
@@ -246,8 +254,37 @@
 			children = (
 				14E1D5F11E53BEEE00A16F95 /* UIKit+Medley.swift */,
 				147E40381E72394300799609 /* UIImage+Medley.swift */,
+				147E404B1E75C84100799609 /* UIView+Medley.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		147E40421E74FFA100799609 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				147E40401E74FF7700799609 /* UserProfileViewController.swift */,
+				147E40471E7520F800799609 /* UserProfileViewModel.swift */,
+			);
+			name = UserProfile;
+			sourceTree = "<group>";
+		};
+		147E40431E75130F00799609 /* PostExplorer */ = {
+			isa = PBXGroup;
+			children = (
+				14E1D5F31E53F01F00A16F95 /* PostExplorerViewController.swift */,
+				147E40441E75132200799609 /* PostExplorerViewModel.swift */,
+			);
+			name = PostExplorer;
+			sourceTree = "<group>";
+		};
+		147E404D1E75C93700799609 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				14441DFC1E518A72004F2F45 /* DataProvider.swift */,
+				14A17B0B1E494AB1000D3146 /* MockMusicProvider.swift */,
+				14A17B101E49810F000D3146 /* MockDataProvider.swift */,
+			);
+			name = Providers;
 			sourceTree = "<group>";
 		};
 		1485DD5E1E01B50B0055FD00 = {
@@ -320,19 +357,18 @@
 		14A17B011E4942E1000D3146 /* New */ = {
 			isa = PBXGroup;
 			children = (
+				147E40491E75257A00799609 /* MedleyBaseViewController.swift */,
 				14A17B021E4942E9000D3146 /* Models */,
-				14A17B0B1E494AB1000D3146 /* MockMusicProvider.swift */,
-				14A17B101E49810F000D3146 /* MockDataProvider.swift */,
+				147E404D1E75C93700799609 /* Providers */,
 				14441DFA1E51851F004F2F45 /* Feed */,
-				14441DFC1E518A72004F2F45 /* DataProvider.swift */,
 				14441DFF1E528020004F2F45 /* PostPlayerView.swift */,
-				14E1D5E71E52ADD600A16F95 /* CellIdentifiers.swift */,
 				147E403E1E74F79100799609 /* Constants.swift */,
 				14E1D5EB1E53B48A00A16F95 /* PostExplorer.xib */,
 				14E1D5EF1E53BC2900A16F95 /* PostExplorer.storyboard */,
-				147E403C1E725DD500799609 /* UserPage.storyboard */,
-				14E1D5F31E53F01F00A16F95 /* PostExplorerViewController.swift */,
+				147E40431E75130F00799609 /* PostExplorer */,
+				147E40421E74FFA100799609 /* UserProfile */,
 				147E403A1E72394E00799609 /* Extensions */,
+				147E404E1E75CD8D00799609 /* HeroID.swift */,
 			);
 			name = New;
 			sourceTree = "<group>";
@@ -511,7 +547,6 @@
 				1485DD9C1E01B5700055FD00 /* GoogleService-Info.plist in Resources */,
 				14DC21891E05C2DC00B621EE /* Login.storyboard in Resources */,
 				14E1D5EC1E53B48A00A16F95 /* PostExplorer.xib in Resources */,
-				147E403D1E725DD500799609 /* UserPage.storyboard in Resources */,
 				1485DD701E01B50B0055FD00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -809,12 +844,17 @@
 				1453B15F1E0E5C0A009116AF /* FriendSearchViewController.swift in Sources */,
 				14A17B0F1E497823000D3146 /* MusicPost.swift in Sources */,
 				1485DD731E01B50B0055FD00 /* Medley.xcdatamodeld in Sources */,
+				147E404C1E75C84100799609 /* UIView+Medley.swift in Sources */,
 				14A17B061E494459000D3146 /* User.swift in Sources */,
 				14E1D5E41E52990D00A16F95 /* FeedExpandedCell.swift in Sources */,
 				14441DF51E517878004F2F45 /* FeedCollapsedCell.swift in Sources */,
+				147E404A1E75257A00799609 /* MedleyBaseViewController.swift in Sources */,
 				14A17B081E49454D000D3146 /* UserViewModel.swift in Sources */,
+				147E40411E74FF7700799609 /* UserProfileViewController.swift in Sources */,
+				147E40481E7520F800799609 /* UserProfileViewModel.swift in Sources */,
 				14441DF91E51851A004F2F45 /* FeedViewModel.swift in Sources */,
 				14441E001E528020004F2F45 /* PostPlayerView.swift in Sources */,
+				147E40451E75132200799609 /* PostExplorerViewModel.swift in Sources */,
 				14A17B111E49810F000D3146 /* MockDataProvider.swift in Sources */,
 				14A17B131E49CA49000D3146 /* FeedViewController.swift in Sources */,
 				14E1D5F41E53F01F00A16F95 /* PostExplorerViewController.swift in Sources */,
@@ -826,9 +866,9 @@
 				147026601E033158004EFE39 /* MedleySession.swift in Sources */,
 				147026661E033649004EFE39 /* SocialMediaProvider.swift in Sources */,
 				147E40391E72394300799609 /* UIImage+Medley.swift in Sources */,
+				147E404F1E75CD8D00799609 /* HeroID.swift in Sources */,
 				14C8AD7F1E0B3BCF00D990BF /* MainRootVC.swift in Sources */,
 				1485DD6B1E01B50B0055FD00 /* AppDelegate.swift in Sources */,
-				14E1D5E81E52ADD600A16F95 /* CellIdentifiers.swift in Sources */,
 				1453B15C1E0E5A7A009116AF /* FriendSearchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

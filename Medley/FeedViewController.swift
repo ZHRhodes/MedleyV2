@@ -11,7 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class FeedViewController: UITableViewController {
+class FeedViewController: MedleyBaseViewController {
 	let disposeBag = DisposeBag()
 	
 	@IBOutlet var feedTableView: UITableView!
@@ -26,24 +26,14 @@ class FeedViewController: UITableViewController {
 		super.viewDidLoad()
 		
 		//setup refresh outlet 
-		tableView.estimatedRowHeight = 138
-		tableView.rowHeight = UITableViewAutomaticDimension
+		feedTableView.estimatedRowHeight = 138
+		feedTableView.rowHeight = UITableViewAutomaticDimension
 		
-		tableView.contentInset.top = UIApplication.shared.statusBarFrame.height
+		feedTableView.contentInset.top = UIApplication.shared.statusBarFrame.height
 		setupRx()
 	}
 	
-	private func showPostExplorer(post: MusicPostViewModel){
-		print("showing post: \(post.song)")
-		if let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.PostExplorer){
-			let vc = vc as! PostExplorerViewController
-			vc.set(post: post)
-			self.present(vc, animated: true) {
-				//
-			}
-		}
 
-	}
 	
 	func setupRx(){
 		feedTableView.dataSource = nil
@@ -57,11 +47,11 @@ class FeedViewController: UITableViewController {
 				cell = expand ? tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.FeedExpandedCell.rawValue, for: indexPath) as! FeedExpandedCell : tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.FeedCollapsedCell.rawValue, for: indexPath) as! FeedCollapsedCell
 				cell.setViewModel(newViewModel: element.viewModel)
 				if(!cell.subscribed){
-					cell.getArtTaps().subscribe(onNext: { [weak self] post in
-						self?.showPostExplorer(post: post)
+					cell.getArtTaps().subscribe(onNext: { post in
+						super.showPostExplorer(post)
 					}).addDisposableTo(self.disposeBag)
-					cell.getProfileTaps().subscribe(onNext: { [weak self] user in
-						print(user.username ?? "no username")
+					cell.getProfileTaps().subscribe(onNext: { user in
+						super.showUserProfile(user)
 					}).addDisposableTo(self.disposeBag)
 					cell.subscribed = true
 				}
