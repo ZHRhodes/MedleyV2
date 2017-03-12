@@ -584,5 +584,83 @@
             </objects>
             <point key="canvasLocation" x="-322.39999999999998" y="-367.46626686656674"/>
         </scene>
+        <!--Post Explorer View Controller-->
+        <scene sceneID="ADq-r6-ufn">
+            <objects>
+                <viewController storyboardIdentifier="PostExplorer" id="3nU-Ar-SbY" customClass="PostExplorerViewController" customModule="Medley" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IJM-Nb-20W"/>
+                        <viewControllerLayoutGuide type="bottom" id="jAa-8Y-nGE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wps-Ld-jtn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xok-PL-Ejh" customClass="PostPlayerView" customModule="Medley" customModuleProvider="target">
+                                <rect key="frame" x="34" y="103" width="307" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pdw-vF-bdn">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="307"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="615-8H-Eer">
+                                        <rect key="frame" x="8" y="341" width="185" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxu-7p-SCA">
+                                        <rect key="frame" x="8" y="379" width="185" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="artistName"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="arc"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mF1-zT-dia">
+                                <rect key="frame" x="16" y="20" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Y3d-fw-7s0"/>
+                                    <constraint firstAttribute="width" constant="24" id="xLp-db-qVd"/>
+                                </constraints>
+                                <state key="normal" image="ic_keyboard_arrow_down"/>
+                                <connections>
+                                    <action selector="hero_unwindToRootViewController" destination="awX-PF-RIe" eventType="touchUpInside" id="2XK-Ig-1mI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mF1-zT-dia" firstAttribute="leading" secondItem="Wps-Ld-jtn" secondAttribute="leadingMargin" id="GHP-SF-qlQ"/>
+                            <constraint firstItem="mF1-zT-dia" firstAttribute="top" secondItem="IJM-Nb-20W" secondAttribute="bottom" id="kVT-Kk-8cy"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="albumArt" destination="pdw-vF-bdn" id="EIf-IU-VNs"/>
+                        <outlet property="artistName" destination="Jxu-7p-SCA" id="JQr-Lk-mIm"/>
+                        <outlet property="postPlayerView" destination="Xok-PL-Ejh" id="fQz-BR-HK2"/>
+                        <outlet property="songName" destination="615-8H-Eer" id="qeU-wB-V3i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awX-PF-RIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="-2279"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="ic_keyboard_arrow_down" width="24" height="24"/>
+    </resources>
 </document>

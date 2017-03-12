@@ -22,6 +22,7 @@
 		147026681E049972004EFE39 /* MusicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147026671E049972004EFE39 /* MusicProvider.swift */; };
 		147E40391E72394300799609 /* UIImage+Medley.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E40381E72394300799609 /* UIImage+Medley.swift */; };
 		147E403D1E725DD500799609 /* UserPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147E403C1E725DD500799609 /* UserPage.storyboard */; };
+		147E403F1E74F79100799609 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E403E1E74F79100799609 /* Constants.swift */; };
 		1485DD6B1E01B50B0055FD00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485DD6A1E01B50B0055FD00 /* AppDelegate.swift */; };
 		1485DD6D1E01B50B0055FD00 /* LoginRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485DD6C1E01B50B0055FD00 /* LoginRootViewController.swift */; };
 		1485DD701E01B50B0055FD00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1485DD6E1E01B50B0055FD00 /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 		147026671E049972004EFE39 /* MusicProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicProvider.swift; sourceTree = "<group>"; };
 		147E40381E72394300799609 /* UIImage+Medley.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Medley.swift"; sourceTree = "<group>"; };
 		147E403C1E725DD500799609 /* UserPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserPage.storyboard; sourceTree = "<group>"; };
+		147E403E1E74F79100799609 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1485DD671E01B50B0055FD00 /* Medley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1485DD6A1E01B50B0055FD00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1485DD6C1E01B50B0055FD00 /* LoginRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRootViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				14441DFC1E518A72004F2F45 /* DataProvider.swift */,
 				14441DFF1E528020004F2F45 /* PostPlayerView.swift */,
 				14E1D5E71E52ADD600A16F95 /* CellIdentifiers.swift */,
+				147E403E1E74F79100799609 /* Constants.swift */,
 				14E1D5EB1E53B48A00A16F95 /* PostExplorer.xib */,
 				14E1D5EF1E53BC2900A16F95 /* PostExplorer.storyboard */,
 				147E403C1E725DD500799609 /* UserPage.storyboard */,
@@ -817,6 +820,7 @@
 				14E1D5F41E53F01F00A16F95 /* PostExplorerViewController.swift in Sources */,
 				14E1D5F21E53BEEE00A16F95 /* UIKit+Medley.swift in Sources */,
 				14441DFD1E518A72004F2F45 /* DataProvider.swift in Sources */,
+				147E403F1E74F79100799609 /* Constants.swift in Sources */,
 				147026641E0335AD004EFE39 /* FacebookManager.swift in Sources */,
 				14A17B0A1E494612000D3146 /* SegueIdentifiers.swift in Sources */,
 				147026601E033158004EFE39 /* MedleySession.swift in Sources */,

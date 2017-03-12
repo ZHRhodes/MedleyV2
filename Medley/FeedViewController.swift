@@ -35,10 +35,14 @@ class FeedViewController: UITableViewController {
 	
 	private func showPostExplorer(post: MusicPostViewModel){
 		print("showing post: \(post.song)")
-		let storyboardName = "PostExplorer"
-		let vc = UIStoryboard(name: storyboardName, bundle: nil).instantiateInitialViewController()! as! PostExplorerViewController
-		vc.set(post: post)
-		self.present(vc, animated: true, completion: nil)
+		if let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.PostExplorer){
+			let vc = vc as! PostExplorerViewController
+			vc.set(post: post)
+			self.present(vc, animated: true) {
+				//
+			}
+		}
+
 	}
 	
 	func setupRx(){
@@ -50,7 +54,7 @@ class FeedViewController: UITableViewController {
 				let indexPath = IndexPath(row: row, section: 0)
 				let cell: FeedCell!
 				let expand = element.viewModel.shouldExpandByLikes(param: 20)
-				cell = expand ? tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.FeedExpandedCell.rawValue, for: indexPath) as! FeedExpandedCell : tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.FeedCollapsedCell.rawValue, for: indexPath) as! FeedCollapsedCell
+				cell = expand ? tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.FeedExpandedCell.rawValue, for: indexPath) as! FeedExpandedCell : tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.FeedCollapsedCell.rawValue, for: indexPath) as! FeedCollapsedCell
 				cell.setViewModel(newViewModel: element.viewModel)
 				if(!cell.subscribed){
 					cell.getArtTaps().subscribe(onNext: { [weak self] post in

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CellIdentifiers: String {
-	case FeedCollapsedCell = "feedCollapsedCell"
-	case FeedExpandedCell = "feedExpandedCell"
-}
+//enum CellIdentifiers: String {
+//	case FeedCollapsedCell = "feedCollapsedCell"
+//	case FeedExpandedCell = "feedExpandedCell"
+//}
