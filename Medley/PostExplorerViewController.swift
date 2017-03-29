@@ -33,9 +33,9 @@ class PostExplorerViewController: UIViewController {
 	
 	private func setupRx(){
 		viewModel.getPost().asObservable().subscribe(onNext: { [weak self] post in
-			self?.albumArt.sd_setImage(with: post.song?.urlBig)
-			self?.songName.text = post.song?.name
-			self?.artistName.text = post.song?.artist
+			self?.albumArt.sd_setImage(with: post.song.urlBig)
+			self?.songName.text = post.song.name
+			self?.artistName.text = post.song.artist
 			
 			self?.albumArt.heroID = post.heroID.album
 			self?.songName.heroID = post.heroID.song

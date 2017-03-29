@@ -17,9 +17,9 @@ struct User {
 	var following: Int = 0
 	var jams: Int = 0
 	
-	lazy var viewModel: UserViewModel = {
-		return UserViewModel(user: self)
-	}()
+	//lazy var viewModel: UserViewModel = {
+	//	return UserViewModel(user: self)
+	//}()
 	
 	init(id: String, username: String, fullName: String, profilePicture: String, followers: Int, following: Int, jams: Int){
 		self.id = id

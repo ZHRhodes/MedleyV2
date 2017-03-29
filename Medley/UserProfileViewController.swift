@@ -33,7 +33,7 @@ class UserProfileViewController: UIViewController {
 	
 	private func setupRx(){
 		viewModel.getUserViewModel().asObservable().subscribe(onNext: { [weak self] user in
-			self?.userPic.sd_setImage(with: user.profilePictureURL, completed: { (image, error, cacheType, url) in
+			self?.userPic.sd_setImage(with: user.profilePicture, completed: { (image, error, cacheType, url) in
 				self?.userPic.image = image?.circle
 			})
 			self?.usernameLabel.text = user.username

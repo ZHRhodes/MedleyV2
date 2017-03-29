@@ -19,13 +19,13 @@ class FeedCollapsedCell: UITableViewCell, FeedCell {
 	var subscribed: Bool = false
 	
 	var artTap: Observable<MusicPostViewModel>!
-	var profileTap: PublishSubject<User>!
+	var profileTap: PublishSubject<UserViewModel>!
 	
 	func getArtTaps() -> Observable<MusicPostViewModel> {
 		return artTap
 	}
 	
-	func getProfileTaps() -> Observable<User> {
+	func getProfileTaps() -> Observable<UserViewModel> {
 		return profileTap
 	}
 	
@@ -59,21 +59,21 @@ class FeedCollapsedCell: UITableViewCell, FeedCell {
 			self?.songName.heroID = viewModel.heroID.song
 			self?.artist.heroID = viewModel.heroID.artist
 			self?.postBackground.heroID = viewModel.heroID.bg
-			self?.username.heroID = viewModel.user?.viewModel.heroID.username
-			self?.profilePic.heroID = viewModel.user?.viewModel.heroID.profilePic
+			self?.username.heroID = viewModel.userViewModel.heroID.username
+			self?.profilePic.heroID = viewModel.userViewModel.heroID.profilePic
 			
 			self?.curViewModel = viewModel
-			self?.username.text = viewModel.user?.username
-			self?.songName.text = viewModel.song?.name
-			self?.artist.text = viewModel.song?.album
-			self?.albumArt.sd_setBackgroundImage(with: viewModel.song?.urlBig, for: .normal)
-			self?.profilePic.sd_setImage(with: viewModel.user?.profilePicture, completed: { (image, error, cacheType, url) in
+			self?.username.text = viewModel.userViewModel.username
+			self?.songName.text = viewModel.song.name
+			self?.artist.text = viewModel.song.album
+			self?.albumArt.sd_setBackgroundImage(with: viewModel.song.urlBig, for: .normal)
+			self?.profilePic.sd_setImage(with: viewModel.userViewModel.profilePicture, completed: { (image, error, cacheType, url) in
 				self?.profilePic.image = image?.circle //check ordering?
 			})
 		}).addDisposableTo(disposeBag)
 		
 		artTap = albumArt.rx.tap.map{ return self.curViewModel }
-		profileTap = PublishSubject<User>()
+		profileTap = PublishSubject<UserViewModel>()
 
 		profilePic.addTapRecognizer(sender: self, sel: #selector(FeedCollapsedCell.profileTapped))
 		username.addTapRecognizer(sender: self, sel: #selector(FeedCollapsedCell.profileTapped))
@@ -81,7 +81,7 @@ class FeedCollapsedCell: UITableViewCell, FeedCell {
 	}
 	
 	func profileTapped(){
-		profileTap.onNext(curViewModel.user!) //is this unsafe?
+		profileTap.onNext(curViewModel.userViewModel) //is this unsafe?
 	}
 	
 }

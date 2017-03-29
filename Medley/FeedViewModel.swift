@@ -14,7 +14,7 @@ class FeedViewModel: NSObject {
 	let provider = MockDataProvider()
 	let disposeBag = DisposeBag()
 	
-	var feedPosts = Variable(Array<MusicPost>()) //was private
+	var feedPosts = Variable(Array<MusicPostViewModel>()) //was private
 	
 	var updatedContent: Observable<Void> {
 		return feedPosts
@@ -40,7 +40,7 @@ class FeedViewModel: NSObject {
 			.addDisposableTo(disposeBag)
 	}
 	
-	func requestFeedPosts() -> Observable<[MusicPost]> { //was private
+	func requestFeedPosts() -> Observable<[MusicPostViewModel]> { //was private
 		return provider
 			.getPosts()
 			.toArray()

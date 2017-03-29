@@ -9,18 +9,23 @@
 import Foundation
 
 class MusicPostViewModel {
-	var user: User?
-	var song: Song?
-	var postDate: Date?
-	var likes: Int?
+	var musicPost: MusicPost!
+	var userViewModel: UserViewModel!
+	var song: Song {
+		return musicPost.song
+	}
+	var postDate: Date? {
+		return musicPost.postDate
+	}
+	var likes: Int? {
+		return musicPost.likes
+	}
 	
 	let heroID = HeroID()
 	
 	init(post: MusicPost){
-		self.user = post.user
-		self.song = post.song
-		self.postDate = post.postDate
-		self.likes = post.likes
+		self.musicPost = post
+		self.userViewModel = UserViewModel(user: post.user)
 	}
 	
 	/*	quick hack for now
@@ -30,4 +35,12 @@ class MusicPostViewModel {
 	func shouldExpandByLikes(param: Int)->Bool{
 		return likes! > param
 	}
+	
+	
+}
+
+extension MusicPostViewModel: Equatable {}
+
+func ==(lhs: MusicPostViewModel, rhs: MusicPostViewModel) -> Bool {
+	return lhs.musicPost == rhs.musicPost
 }

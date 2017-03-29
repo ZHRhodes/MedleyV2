@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol DataProvider {
-	func getPosts() -> Observable<MusicPost>
+	func getPosts() -> Observable<MusicPostViewModel>
 }

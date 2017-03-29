@@ -43,9 +43,9 @@ class FeedViewController: MedleyBaseViewController {
 			.bindTo(feedTableView.rx.items) { (tableView, row, element) in
 				let indexPath = IndexPath(row: row, section: 0)
 				let cell: FeedCell!
-				let expand = element.viewModel.shouldExpandByLikes(param: 20)
+				let expand = element.shouldExpandByLikes(param: 20)
 				cell = expand ? tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.FeedExpandedCell.rawValue, for: indexPath) as! FeedExpandedCell : tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.FeedCollapsedCell.rawValue, for: indexPath) as! FeedCollapsedCell
-				cell.setViewModel(newViewModel: element.viewModel)
+				cell.setViewModel(newViewModel: element)
 				if(!cell.subscribed){
 					cell.getArtTaps().subscribe(onNext: { post in
 						super.showPostExplorer(post)

@@ -11,10 +11,10 @@ import RxSwift
 
 class MockDataProvider: DataProvider {
 	
-	func getPosts() -> Observable<MusicPost> {
+	func getPosts() -> Observable<MusicPostViewModel> {
 		return Observable
 			.zip(getUsers(), MockMusicProvider().getMockSongs()) { (_user, _song) in
-				MusicPost(user: _user, song: _song, postDate: Date(), likes: Int(arc4random()) % 30)
+				MusicPostViewModel(post: MusicPost(user: _user, song: _song, postDate: Date(), likes: Int(arc4random()) % 30))
 			}
 			.observeOn(MainScheduler.instance)
 	}

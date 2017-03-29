@@ -9,21 +9,29 @@
 import Foundation
 
 class UserViewModel: NSObject {
-	var username: String?
-	var id: String?
-	var profilePictureURL: URL?
-	var followers: Int?
-	var following: Int?
-	var jams: Int?
+	var user: User!
+	var username: String? {
+		return user.username
+	}
+	var id: String? {
+		return user.id
+	}
+	var profilePicture: URL? {
+		return user.profilePicture
+	}
+	var followers: Int? {
+		return user.followers
+	}
+	var following: Int? {
+		return user.following
+	}
+	var jams: Int? {
+		return user.jams
+	}
 	
 	let heroID = HeroID()
 	
 	init(user: User) {
-		username = user.username
-		id = user.id
-		profilePictureURL = user.profilePicture
-		followers = user.followers
-		following = user.following
-		jams = user.jams
+		self.user = user
 	}
 }

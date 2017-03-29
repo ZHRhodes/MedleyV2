@@ -12,6 +12,6 @@ import RxSwift
 protocol FeedCell {
 	var subscribed: Bool { get set } //maybe not ideal but works
 	func getArtTaps() -> Observable<MusicPostViewModel>
-	func getProfileTaps() -> Observable<User>
+	func getProfileTaps() -> Observable<UserViewModel>
 	func setViewModel(newViewModel: MusicPostViewModel)
 }
