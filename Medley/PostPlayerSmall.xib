@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C63a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAY-JN-Iuz" customClass="PostPlayerSmall" customModule="Medley" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="64"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I89-lW-ngv">
+                    <rect key="frame" x="68" y="2" width="40" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apb-v3-wTh">
+                    <rect key="frame" x="68" y="24" width="38" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ee-bG-eTW">
+                    <rect key="frame" x="281" y="0.0" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="TIw-pC-M13"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="playButtonTapped:" destination="iAY-JN-Iuz" eventType="touchUpInside" id="1yW-27-OxG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y23-XX-lxz">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="Wfx-MI-7xp"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="albumArtTapped:" destination="iAY-JN-Iuz" eventType="touchUpInside" id="7xj-XV-rgQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="apb-v3-wTh" firstAttribute="top" secondItem="I89-lW-ngv" secondAttribute="bottom" constant="2" id="43O-wp-wRp"/>
+                <constraint firstItem="y23-XX-lxz" firstAttribute="top" secondItem="iAY-JN-Iuz" secondAttribute="top" id="DpI-6N-hj5"/>
+                <constraint firstItem="apb-v3-wTh" firstAttribute="leading" secondItem="I89-lW-ngv" secondAttribute="leading" id="THk-b9-U29"/>
+                <constraint firstAttribute="bottom" secondItem="5ee-bG-eTW" secondAttribute="bottom" id="TKy-9o-oZb"/>
+                <constraint firstAttribute="height" constant="60" id="kD6-Te-Xhh"/>
+                <constraint firstAttribute="bottom" secondItem="y23-XX-lxz" secondAttribute="bottom" id="kgA-aT-Ma7"/>
+                <constraint firstItem="5ee-bG-eTW" firstAttribute="top" secondItem="iAY-JN-Iuz" secondAttribute="top" id="mYd-cT-Iy7"/>
+                <constraint firstAttribute="trailing" secondItem="5ee-bG-eTW" secondAttribute="trailing" id="pAZ-Pg-ImM"/>
+                <constraint firstItem="y23-XX-lxz" firstAttribute="leading" secondItem="iAY-JN-Iuz" secondAttribute="leading" id="tTG-Fb-Y0a"/>
+                <constraint firstItem="I89-lW-ngv" firstAttribute="top" secondItem="iAY-JN-Iuz" secondAttribute="top" constant="2" id="v1r-zj-VL0"/>
+                <constraint firstItem="I89-lW-ngv" firstAttribute="leading" secondItem="y23-XX-lxz" secondAttribute="trailing" constant="8" id="val-4w-R6P"/>
+                <constraint firstItem="apb-v3-wTh" firstAttribute="leading" secondItem="y23-XX-lxz" secondAttribute="trailing" constant="8" id="xMR-bq-8u1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="albumArt" destination="y23-XX-lxz" id="PBx-e1-kQC"/>
+                <outlet property="artistName" destination="apb-v3-wTh" id="Egw-0k-btT"/>
+                <outlet property="playButton" destination="5ee-bG-eTW" id="3yl-jt-IPR"/>
+                <outlet property="songName" destination="I89-lW-ngv" id="sla-Jv-oZG"/>
+            </connections>
+            <point key="canvasLocation" x="29.5" y="-184"/>
+        </view>
+    </objects>
+</document>

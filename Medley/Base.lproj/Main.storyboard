@@ -148,7 +148,7 @@
             <objects>
                 <tableViewController id="Mgb-7o-SgM" customClass="FeedViewController" customModule="Medley" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="138" sectionHeaderHeight="28" sectionFooterHeight="28" id="pOL-NU-hmG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="951"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1151"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -397,6 +397,73 @@
                                     <outlet property="username" destination="vhl-Qq-92u" id="tBm-We-NrV"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="138" id="WHF-fc-ofK" customClass="FeedCell" customModule="Medley" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="683" width="375" height="138"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WHF-fc-ofK" id="3NT-Dv-Tfp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="138"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9m-Wf-if0" customClass="PostPlayerView" customModule="Medley" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="33" width="345" height="64"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="345" id="J1u-DX-PaL"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="arc"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y84-wL-jqY">
+                                            <rect key="frame" x="15" y="0.0" width="28" height="28"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="28" id="1rK-Dg-LmY"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 hrs" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yq-LE-RvW">
+                                            <rect key="frame" x="314" y="5" width="46" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="Jqn-jf-5Di"/>
+                                                <constraint firstAttribute="height" constant="19" id="r4k-fu-hNM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="13"/>
+                                            <color key="textColor" white="0.54405824830000005" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A76-GK-b7S">
+                                            <rect key="frame" x="51" y="4" width="160" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="160" id="Ngt-Tm-bbm"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Y84-wL-jqY" firstAttribute="leading" secondItem="i9m-Wf-if0" secondAttribute="leading" id="9cm-zo-fGv"/>
+                                        <constraint firstItem="A76-GK-b7S" firstAttribute="leading" secondItem="Y84-wL-jqY" secondAttribute="trailing" constant="8" id="BuO-ok-Nbc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="i9m-Wf-if0" secondAttribute="bottom" constant="33" id="Mj5-Wj-SDA"/>
+                                        <constraint firstItem="Y84-wL-jqY" firstAttribute="centerY" secondItem="A76-GK-b7S" secondAttribute="centerY" id="PHr-2X-QMZ"/>
+                                        <constraint firstItem="i9m-Wf-if0" firstAttribute="top" secondItem="Y84-wL-jqY" secondAttribute="bottom" constant="5" id="RY0-qe-LHL"/>
+                                        <constraint firstItem="i9m-Wf-if0" firstAttribute="top" secondItem="4Yq-LE-RvW" secondAttribute="bottom" constant="9" id="VfC-Uf-ma5"/>
+                                        <constraint firstItem="i9m-Wf-if0" firstAttribute="leading" secondItem="3NT-Dv-Tfp" secondAttribute="leadingMargin" constant="7" id="YQ2-il-dci"/>
+                                        <constraint firstItem="Y84-wL-jqY" firstAttribute="top" secondItem="3NT-Dv-Tfp" secondAttribute="top" id="ZOw-A1-WsR"/>
+                                        <constraint firstItem="i9m-Wf-if0" firstAttribute="top" secondItem="A76-GK-b7S" secondAttribute="bottom" constant="8" id="ZTp-EC-M3R"/>
+                                        <constraint firstItem="4Yq-LE-RvW" firstAttribute="trailing" secondItem="i9m-Wf-if0" secondAttribute="trailing" id="kVW-mA-rgJ"/>
+                                        <constraint firstItem="i9m-Wf-if0" firstAttribute="top" secondItem="3NT-Dv-Tfp" secondAttribute="topMargin" constant="25" id="ktn-Jg-elg"/>
+                                        <constraint firstItem="A76-GK-b7S" firstAttribute="centerY" secondItem="4Yq-LE-RvW" secondAttribute="centerY" id="sHi-eN-rdY"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="i9m-Wf-if0" secondAttribute="trailing" constant="7" id="wi5-Cg-uA2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="postPlayer" destination="i9m-Wf-if0" id="BsM-Va-irl"/>
+                                    <outlet property="timeSince" destination="4Yq-LE-RvW" id="7Oz-2n-zqo"/>
+                                    <outlet property="userPic" destination="Y84-wL-jqY" id="awA-16-9Xs"/>
+                                    <outlet property="username" destination="A76-GK-b7S" id="TaV-mW-obZ"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Mgb-7o-SgM" id="TVc-LT-ah1"/>
@@ -406,7 +473,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Item" id="hL9-3q-0ZA"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="1200"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -416,7 +483,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Krf-kO-gGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-322.39999999999998" y="-2129.2353823088456"/>
+            <point key="canvasLocation" x="-322" y="-2273"/>
         </scene>
         <!--Item-->
         <scene sceneID="nTo-td-9ii">

@@ -20,8 +20,6 @@ class FeedViewController: MedleyBaseViewController {
 		return FeedViewModel(refreshOutlet: nil)
 	}()
 	
-	//var artTaps = ObserverType()
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -33,8 +31,6 @@ class FeedViewController: MedleyBaseViewController {
 		setupRx()
 	}
 	
-
-	
 	func setupRx(){
 		feedTableView.dataSource = nil
 		feedTableView.delegate = nil
@@ -42,22 +38,20 @@ class FeedViewController: MedleyBaseViewController {
 			.requestFeedPosts() //will this get new info/updates? what's pushing here?
 			.bindTo(feedTableView.rx.items) { (tableView, row, element) in
 				let indexPath = IndexPath(row: row, section: 0)
-				let cell: FeedCell!
-				let expand = element.viewModel.shouldExpandByLikes(param: 20)
-				cell = expand ? tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.FeedExpandedCell.rawValue, for: indexPath) as! FeedExpandedCell : tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.FeedCollapsedCell.rawValue, for: indexPath) as! FeedCollapsedCell
-				cell.setViewModel(newViewModel: element.viewModel)
-				if(!cell.subscribed){
+				
+				let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.FeedCell.rawValue, for: indexPath) as! FeedCell
+				cell.setPost(post: element)
+				if(!cell.subscribed){ //maybe use Completed event to unsubscribe instead?
 					cell.getArtTaps().subscribe(onNext: { post in
-						super.showPostExplorer(post)
+						super.showPostExplorer(post!)
 					}).addDisposableTo(self.disposeBag)
 					cell.getProfileTaps().subscribe(onNext: { user in
 						super.showUserProfile(user)
 					}).addDisposableTo(self.disposeBag)
 					cell.subscribed = true
 				}
-				return expand ? cell as! FeedExpandedCell : cell as! FeedCollapsedCell
-			}
-			.addDisposableTo(disposeBag)
+				return cell
+			}.addDisposableTo(disposeBag)
 	}
 
 }

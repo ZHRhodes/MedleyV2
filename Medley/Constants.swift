@@ -12,6 +12,7 @@ struct Constants{
 	enum CellIdentifiers: String {
 		case FeedCollapsedCell = "feedCollapsedCell"
 		case FeedExpandedCell = "feedExpandedCell"
+		case FeedCell = "feedCell"
 	}
 	
 	struct StoryboardIDs {

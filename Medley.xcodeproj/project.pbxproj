@@ -28,6 +28,11 @@
 		147E404A1E75257A00799609 /* MedleyBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E40491E75257A00799609 /* MedleyBaseViewController.swift */; };
 		147E404C1E75C84100799609 /* UIView+Medley.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E404B1E75C84100799609 /* UIView+Medley.swift */; };
 		147E404F1E75CD8D00799609 /* HeroID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E404E1E75CD8D00799609 /* HeroID.swift */; };
+		147E40511E76103400799609 /* PostPlayerBig.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147E40501E76103400799609 /* PostPlayerBig.xib */; };
+		147E40531E76138F00799609 /* PostPlayerSmall.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147E40521E76138F00799609 /* PostPlayerSmall.xib */; };
+		147E40551E761A1F00799609 /* PostPlayerBig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E40541E761A1F00799609 /* PostPlayerBig.swift */; };
+		147E40571E761A3000799609 /* PostPlayerSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E40561E761A3000799609 /* PostPlayerSmall.swift */; };
+		147E405B1E764FC100799609 /* PostPlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E405A1E764FC100799609 /* PostPlayerProtocol.swift */; };
 		1485DD6B1E01B50B0055FD00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485DD6A1E01B50B0055FD00 /* AppDelegate.swift */; };
 		1485DD6D1E01B50B0055FD00 /* LoginRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485DD6C1E01B50B0055FD00 /* LoginRootViewController.swift */; };
 		1485DD701E01B50B0055FD00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1485DD6E1E01B50B0055FD00 /* Main.storyboard */; };
@@ -102,6 +107,11 @@
 		147E40491E75257A00799609 /* MedleyBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedleyBaseViewController.swift; sourceTree = "<group>"; };
 		147E404B1E75C84100799609 /* UIView+Medley.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Medley.swift"; sourceTree = "<group>"; };
 		147E404E1E75CD8D00799609 /* HeroID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroID.swift; sourceTree = "<group>"; };
+		147E40501E76103400799609 /* PostPlayerBig.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostPlayerBig.xib; sourceTree = "<group>"; };
+		147E40521E76138F00799609 /* PostPlayerSmall.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostPlayerSmall.xib; sourceTree = "<group>"; };
+		147E40541E761A1F00799609 /* PostPlayerBig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostPlayerBig.swift; sourceTree = "<group>"; };
+		147E40561E761A3000799609 /* PostPlayerSmall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostPlayerSmall.swift; sourceTree = "<group>"; };
+		147E405A1E764FC100799609 /* PostPlayerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostPlayerProtocol.swift; sourceTree = "<group>"; };
 		1485DD671E01B50B0055FD00 /* Medley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1485DD6A1E01B50B0055FD00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1485DD6C1E01B50B0055FD00 /* LoginRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRootViewController.swift; sourceTree = "<group>"; };
@@ -361,7 +371,6 @@
 				14A17B021E4942E9000D3146 /* Models */,
 				147E404D1E75C93700799609 /* Providers */,
 				14441DFA1E51851F004F2F45 /* Feed */,
-				14441DFF1E528020004F2F45 /* PostPlayerView.swift */,
 				147E403E1E74F79100799609 /* Constants.swift */,
 				14E1D5EB1E53B48A00A16F95 /* PostExplorer.xib */,
 				14E1D5EF1E53BC2900A16F95 /* PostExplorer.storyboard */,
@@ -369,6 +378,12 @@
 				147E40421E74FFA100799609 /* UserProfile */,
 				147E403A1E72394E00799609 /* Extensions */,
 				147E404E1E75CD8D00799609 /* HeroID.swift */,
+				147E40501E76103400799609 /* PostPlayerBig.xib */,
+				147E40521E76138F00799609 /* PostPlayerSmall.xib */,
+				147E40541E761A1F00799609 /* PostPlayerBig.swift */,
+				147E40561E761A3000799609 /* PostPlayerSmall.swift */,
+				14441DFF1E528020004F2F45 /* PostPlayerView.swift */,
+				147E405A1E764FC100799609 /* PostPlayerProtocol.swift */,
 			);
 			name = New;
 			sourceTree = "<group>";
@@ -544,10 +559,12 @@
 				1485DD781E01B50B0055FD00 /* LaunchScreen.storyboard in Resources */,
 				1485DD751E01B50B0055FD00 /* Assets.xcassets in Resources */,
 				14E1D5F01E53BC2900A16F95 /* PostExplorer.storyboard in Resources */,
+				147E40531E76138F00799609 /* PostPlayerSmall.xib in Resources */,
 				1485DD9C1E01B5700055FD00 /* GoogleService-Info.plist in Resources */,
 				14DC21891E05C2DC00B621EE /* Login.storyboard in Resources */,
 				14E1D5EC1E53B48A00A16F95 /* PostExplorer.xib in Resources */,
 				1485DD701E01B50B0055FD00 /* Main.storyboard in Resources */,
+				147E40511E76103400799609 /* PostPlayerBig.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,7 +867,9 @@
 				14441DF51E517878004F2F45 /* FeedCollapsedCell.swift in Sources */,
 				147E404A1E75257A00799609 /* MedleyBaseViewController.swift in Sources */,
 				14A17B081E49454D000D3146 /* UserViewModel.swift in Sources */,
+				147E40551E761A1F00799609 /* PostPlayerBig.swift in Sources */,
 				147E40411E74FF7700799609 /* UserProfileViewController.swift in Sources */,
+				147E40571E761A3000799609 /* PostPlayerSmall.swift in Sources */,
 				147E40481E7520F800799609 /* UserProfileViewModel.swift in Sources */,
 				14441DF91E51851A004F2F45 /* FeedViewModel.swift in Sources */,
 				14441E001E528020004F2F45 /* PostPlayerView.swift in Sources */,
@@ -862,6 +881,7 @@
 				14441DFD1E518A72004F2F45 /* DataProvider.swift in Sources */,
 				147E403F1E74F79100799609 /* Constants.swift in Sources */,
 				147026641E0335AD004EFE39 /* FacebookManager.swift in Sources */,
+				147E405B1E764FC100799609 /* PostPlayerProtocol.swift in Sources */,
 				14A17B0A1E494612000D3146 /* SegueIdentifiers.swift in Sources */,
 				147026601E033158004EFE39 /* MedleySession.swift in Sources */,
 				147026661E033649004EFE39 /* SocialMediaProvider.swift in Sources */,

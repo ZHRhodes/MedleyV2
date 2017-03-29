@@ -12,28 +12,28 @@ import SDWebImage
 import UIKit
 import Hero
 
-class FeedExpandedCell: UITableViewCell, FeedCell {
-	
-	var viewModel = PublishSubject<MusicPostViewModel>()
-	
-	var subscribed: Bool = false
-
-	var artTap: Observable<MusicPostViewModel>!
-	var profileTap: PublishSubject<User>!
-	
-	func getArtTaps() -> Observable<MusicPostViewModel> {
-		return artTap
-	}
-	
-	func getProfileTaps() -> Observable<User> {
-		return profileTap
-	}
-	
-	var curViewModel: MusicPostViewModel! //this sucks and sorta circumvents reactive practice. should revisit! basically making this a Variable that doesn't emit to new subscribers. but assumed there will be a model there when clicked
-	
-	func setViewModel(newViewModel: MusicPostViewModel){
-		self.viewModel.onNext(newViewModel)
-	}
+class FeedExpandedCell: UITableViewCell {
+//	
+//	var viewModel = PublishSubject<MusicPostViewModel>()
+//	
+//	var subscribed: Bool = false
+//
+//	var artTap: Observable<MusicPostViewModel>!
+//	var profileTap: PublishSubject<User>!
+//	
+//	func getArtTaps() -> Observable<MusicPostViewModel> {
+//		return artTap
+//	}
+//	
+//	func getProfileTaps() -> Observable<User> {
+//		return profileTap
+//	}
+//	
+//	var curViewModel: MusicPostViewModel! //this sucks and sorta circumvents reactive practice. should revisit! basically making this a Variable that doesn't emit to new subscribers. but assumed there will be a model there when clicked
+//	
+//	func setViewModel(newViewModel: MusicPostViewModel){
+//		self.viewModel.onNext(newViewModel)
+//	}
 	
 	@IBOutlet var postBackground: PostPlayerView!
 	
@@ -46,45 +46,45 @@ class FeedExpandedCell: UITableViewCell, FeedCell {
 	@IBOutlet var songName: UILabel!
 	@IBOutlet var artist: UILabel!
 	
-	
-	let disposeBag = DisposeBag()
-	
-	override func awakeFromNib() {
-		super.awakeFromNib()
-		setupRx()
-	}
-	
-	/*what goes in the model!?*/
-	private func setupRx() {
-		viewModel.subscribe(onNext: { [weak self] viewModel in
-			self?.albumArt.heroID = viewModel.heroID.album
-			self?.songName.heroID = viewModel.heroID.song
-			self?.artist.heroID = viewModel.heroID.artist
-			self?.postBackground.heroID = viewModel.heroID.bg
-			self?.username.heroID = viewModel.user?.viewModel.heroID.username
-			self?.profilePic.heroID = viewModel.user?.viewModel.heroID.profilePic
-			
-			self?.curViewModel = viewModel
-			self?.username.text = viewModel.user?.username
-			self?.songName.text = viewModel.song?.name
-			self?.artist.text = viewModel.song?.album
-			self?.albumArt.sd_setBackgroundImage(with: viewModel.song?.urlBig, for: .normal)
-			self?.profilePic.sd_setImage(with: viewModel.user?.profilePicture, completed: { (image, error, cacheType, url) in
-				self?.profilePic.image = image?.circle //check ordering?
-			})
-		}).addDisposableTo(disposeBag)
-		
-		artTap = albumArt.rx.tap.map{ return self.curViewModel }
-		profileTap = PublishSubject<User>()
-		
-		profilePic.addTapRecognizer(sender: self, sel: #selector(FeedExpandedCell.profileTapped))
-		username.addTapRecognizer(sender: self, sel: #selector(FeedExpandedCell.profileTapped))
-
-	}
-	
-	func profileTapped(){
-		profileTap.onNext(curViewModel.user!) //is this unsafe?
-	}
-	
+//	
+//	let disposeBag = DisposeBag()
+//	
+//	override func awakeFromNib() {
+//		super.awakeFromNib()
+//		setupRx()
+//	}
+//	
+//	/*what goes in the model!?*/
+//	private func setupRx() {
+//		viewModel.subscribe(onNext: { [weak self] viewModel in
+//			self?.albumArt.heroID = viewModel.heroID.album
+//			self?.songName.heroID = viewModel.heroID.song
+//			self?.artist.heroID = viewModel.heroID.artist
+//			self?.postBackground.heroID = viewModel.heroID.bg
+//			self?.username.heroID = viewModel.user?.viewModel.heroID.username
+//			self?.profilePic.heroID = viewModel.user?.viewModel.heroID.profilePic
+//			
+//			self?.curViewModel = viewModel
+//			self?.username.text = viewModel.user?.username
+//			self?.songName.text = viewModel.song?.name
+//			self?.artist.text = viewModel.song?.album
+//			self?.albumArt.sd_setBackgroundImage(with: viewModel.song?.urlBig, for: .normal)
+//			self?.profilePic.sd_setImage(with: viewModel.user?.profilePicture, completed: { (image, error, cacheType, url) in
+//				self?.profilePic.image = image?.circle //check ordering?
+//			})
+//		}).addDisposableTo(disposeBag)
+//		
+//		artTap = albumArt.rx.tap.map{ return self.curViewModel }
+//		profileTap = PublishSubject<User>()
+//		
+//		profilePic.addTapRecognizer(sender: self, sel: #selector(FeedExpandedCell.profileTapped))
+//		username.addTapRecognizer(sender: self, sel: #selector(FeedExpandedCell.profileTapped))
+//
+//	}
+//	
+//	func profileTapped(){
+//		profileTap.onNext(curViewModel.user!) //is this unsafe?
+//	}
+//	
 	
 }
