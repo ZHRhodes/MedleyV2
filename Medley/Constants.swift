@@ -19,4 +19,8 @@ struct Constants{
 		static let UserProfile = "UserProfile"
 	}
 	
+	struct Assets {
+		static let playButton = "play_button.png"
+		static let pauseButton = "pause_button.png"
+	}
 }

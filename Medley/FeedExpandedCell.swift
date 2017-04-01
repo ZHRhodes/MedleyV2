@@ -46,6 +46,7 @@ class FeedExpandedCell: UITableViewCell, FeedCell {
 	@IBOutlet var songName: UILabel!
 	@IBOutlet var artist: UILabel!
 	
+	@IBOutlet var playButton: PlayPauseButton!
 	
 	let disposeBag = DisposeBag()
 	
@@ -86,5 +87,8 @@ class FeedExpandedCell: UITableViewCell, FeedCell {
 		profileTap.onNext(curViewModel.userViewModel) //is this unsafe?
 	}
 	
+	@IBAction func playPauseTapped(_ sender: Any) {
+		playButton.tap()
+	}
 	
 }

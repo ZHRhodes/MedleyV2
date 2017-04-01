@@ -45,6 +45,7 @@ class FeedCollapsedCell: UITableViewCell, FeedCell {
 	@IBOutlet var songName: UILabel!
 	@IBOutlet var artist: UILabel!
 
+	@IBOutlet var playButton: PlayPauseButton!
 	
 	let disposeBag = DisposeBag()
 	
@@ -82,6 +83,10 @@ class FeedCollapsedCell: UITableViewCell, FeedCell {
 	
 	func profileTapped(){
 		profileTap.onNext(curViewModel.userViewModel) //is this unsafe?
+	}
+	
+	@IBAction func playPauseTapped(_ sender: Any) {
+		playButton.tap()
 	}
 	
 }

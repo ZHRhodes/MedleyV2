@@ -162,13 +162,6 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="duc-9F-Bjh" customClass="PostPlayerView" customModule="Medley" customModuleProvider="target">
                                             <rect key="frame" x="15" y="33" width="345" height="64"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6eF-kk-KBI">
-                                                    <rect key="frame" x="282" y="0.0" width="63" height="64"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="63" id="Axs-xx-vB0"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6aB-Xe-xfW">
                                                     <rect key="frame" x="59" y="-4" width="56" height="57"/>
                                                     <subviews>
@@ -197,16 +190,26 @@
                                                         <constraint firstAttribute="width" constant="63" id="Yh6-8h-Npv"/>
                                                     </constraints>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZx-SX-0ax" customClass="PlayPauseButton" customModule="Medley" customModuleProvider="target">
+                                                    <rect key="frame" x="282" y="0.0" width="63" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="63" id="bW2-9j-bkm"/>
+                                                    </constraints>
+                                                    <state key="normal" image="play_button"/>
+                                                    <connections>
+                                                        <action selector="playPauseTapped:" destination="xR6-5M-uw5" eventType="touchUpInside" id="EYc-wC-PbR"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="6eF-kk-KBI" secondAttribute="trailing" id="1Ve-OH-Auq"/>
-                                                <constraint firstItem="6eF-kk-KBI" firstAttribute="top" secondItem="8yf-MY-hiP" secondAttribute="top" id="2aI-cR-YXI"/>
                                                 <constraint firstAttribute="bottom" secondItem="6aB-Xe-xfW" secondAttribute="bottom" constant="11" id="HtV-dS-0mq"/>
+                                                <constraint firstItem="fZx-SX-0ax" firstAttribute="top" secondItem="8yf-MY-hiP" secondAttribute="top" id="Id7-4q-HZ8"/>
                                                 <constraint firstItem="6aB-Xe-xfW" firstAttribute="top" secondItem="duc-9F-Bjh" secondAttribute="topMargin" constant="-12" id="KE0-QL-y4x"/>
                                                 <constraint firstItem="6aB-Xe-xfW" firstAttribute="leading" secondItem="duc-9F-Bjh" secondAttribute="leading" constant="59" id="Ody-a0-QUw"/>
+                                                <constraint firstAttribute="trailing" secondItem="fZx-SX-0ax" secondAttribute="trailing" id="TIz-bW-M0v"/>
                                                 <constraint firstItem="8yf-MY-hiP" firstAttribute="top" secondItem="duc-9F-Bjh" secondAttribute="top" id="Tpn-dI-NnP"/>
-                                                <constraint firstItem="6eF-kk-KBI" firstAttribute="bottom" secondItem="8yf-MY-hiP" secondAttribute="bottom" id="eEs-fF-Mgl"/>
+                                                <constraint firstItem="fZx-SX-0ax" firstAttribute="bottom" secondItem="8yf-MY-hiP" secondAttribute="bottom" id="brw-qh-N7G"/>
                                                 <constraint firstItem="8yf-MY-hiP" firstAttribute="leading" secondItem="duc-9F-Bjh" secondAttribute="leading" id="esY-Ij-EUn"/>
                                                 <constraint firstAttribute="bottom" secondItem="8yf-MY-hiP" secondAttribute="bottom" id="ld3-Ou-JXG"/>
                                             </constraints>
@@ -260,6 +263,7 @@
                                 <connections>
                                     <outlet property="albumArt" destination="8yf-MY-hiP" id="lG4-Kk-oLU"/>
                                     <outlet property="artist" destination="2bD-Wc-Fqs" id="oKx-Rf-IFS"/>
+                                    <outlet property="playButton" destination="fZx-SX-0ax" id="tug-Wy-LgO"/>
                                     <outlet property="postBackground" destination="duc-9F-Bjh" id="Ehp-TI-SQ7"/>
                                     <outlet property="profilePic" destination="OME-yY-nRa" id="cf1-WU-qpZ"/>
                                     <outlet property="songName" destination="KF1-jN-vG9" id="cqX-GR-hoM"/>
@@ -275,10 +279,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OCW-W1-XnS" customClass="PostPlayerView" customModule="Medley" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="30" width="338" height="397"/>
+                                            <rect key="frame" x="16" y="30" width="345" height="397"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9m-vu-G9g">
-                                                    <rect key="frame" x="0.0" y="334" width="338" height="63"/>
+                                                    <rect key="frame" x="0.0" y="334" width="345" height="63"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X7i-wT-mvn">
                                                             <rect key="frame" x="8" y="8" width="40" height="41"/>
@@ -306,26 +310,29 @@
                                                                 <constraint firstAttribute="bottom" secondItem="8fb-Vz-kev" secondAttribute="bottom" constant="20" symbolic="YES" id="QRT-hg-Eau"/>
                                                             </constraints>
                                                         </stackView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4FH-Mn-K1Q">
-                                                            <rect key="frame" x="275" y="0.0" width="63" height="63"/>
-                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFy-aT-bGX" customClass="PlayPauseButton" customModule="Medley" customModuleProvider="target">
+                                                            <rect key="frame" x="282" y="0.0" width="63" height="63"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="63" id="xmF-iH-jjq"/>
+                                                                <constraint firstAttribute="width" constant="63" id="lkF-T1-ApC"/>
                                                             </constraints>
-                                                        </imageView>
+                                                            <state key="normal" title="Button" image="play_button"/>
+                                                            <connections>
+                                                                <action selector="playPauseTapped:" destination="sPm-v5-2Oi" eventType="touchUpInside" id="crk-WY-POt"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="4FH-Mn-K1Q" firstAttribute="top" secondItem="r9m-vu-G9g" secondAttribute="top" id="3gp-8k-OdC"/>
-                                                        <constraint firstAttribute="trailing" secondItem="4FH-Mn-K1Q" secondAttribute="trailing" id="4KR-KY-rIZ"/>
+                                                        <constraint firstItem="gFy-aT-bGX" firstAttribute="top" secondItem="r9m-vu-G9g" secondAttribute="top" id="4JA-aR-62k"/>
+                                                        <constraint firstAttribute="bottom" secondItem="gFy-aT-bGX" secondAttribute="bottom" id="6tV-pe-rv8"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gFy-aT-bGX" secondAttribute="trailing" id="BNJ-3G-CFE"/>
                                                         <constraint firstAttribute="bottom" secondItem="X7i-wT-mvn" secondAttribute="bottom" constant="14" id="Fsu-2k-YE1"/>
                                                         <constraint firstItem="X7i-wT-mvn" firstAttribute="top" secondItem="r9m-vu-G9g" secondAttribute="topMargin" id="Ga0-n8-7YN"/>
-                                                        <constraint firstAttribute="bottom" secondItem="4FH-Mn-K1Q" secondAttribute="bottom" id="sLv-8c-9L0"/>
                                                         <constraint firstItem="X7i-wT-mvn" firstAttribute="leading" secondItem="r9m-vu-G9g" secondAttribute="leadingMargin" id="xRZ-pa-hSw"/>
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHK-0G-ioJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="338" height="334"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="334"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="334" id="1Gj-DG-e7M"/>
                                                     </constraints>
@@ -381,15 +388,16 @@
                                         <constraint firstItem="r1b-Xb-MrE" firstAttribute="leading" secondItem="kj1-vc-0kD" secondAttribute="leadingMargin" constant="8" id="SNF-bg-MDI"/>
                                         <constraint firstItem="vhl-Qq-92u" firstAttribute="top" secondItem="NOA-wC-r7m" secondAttribute="top" id="VMR-8F-9b7"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="OCW-W1-XnS" secondAttribute="bottom" constant="82" id="aHj-LE-hS2"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="OCW-W1-XnS" secondAttribute="trailing" constant="13" id="ahs-s9-2Db"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="OCW-W1-XnS" secondAttribute="trailing" constant="6" id="ahs-s9-2Db"/>
                                         <constraint firstItem="OCW-W1-XnS" firstAttribute="top" secondItem="r1b-Xb-MrE" secondAttribute="bottom" constant="2" id="bEa-uq-kgv"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="OCW-W1-XnS" secondAttribute="trailing" constant="13" id="fMp-fR-FL1"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="OCW-W1-XnS" secondAttribute="trailing" constant="6" id="fMp-fR-FL1"/>
                                         <constraint firstItem="r1b-Xb-MrE" firstAttribute="leading" secondItem="OCW-W1-XnS" secondAttribute="leading" id="q2d-Nr-0dt"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="albumArt" destination="oHK-0G-ioJ" id="5ML-Lu-OtB"/>
                                     <outlet property="artist" destination="R9O-I5-Esu" id="aXM-vp-EkX"/>
+                                    <outlet property="playButton" destination="gFy-aT-bGX" id="wGD-AD-QyK"/>
                                     <outlet property="postBackground" destination="OCW-W1-XnS" id="n1H-zR-Hnl"/>
                                     <outlet property="profilePic" destination="r1b-Xb-MrE" id="Uvg-Aw-YH4"/>
                                     <outlet property="songName" destination="8fb-Vz-kev" id="x3h-Lz-cfe"/>
@@ -744,5 +752,6 @@
     </scenes>
     <resources>
         <image name="ic_keyboard_arrow_down" width="24" height="24"/>
+        <image name="play_button" width="65" height="65"/>
     </resources>
 </document>
