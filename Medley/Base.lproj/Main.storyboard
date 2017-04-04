@@ -1,15 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C63a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6TK-3u-zct">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F43c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zlf-0h-IUI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Spotify Test View Controller-->
+        <scene sceneID="QMJ-Pi-ej4">
+            <objects>
+                <viewController storyboardIdentifier="SpotifyTestVC" id="Zlf-0h-IUI" customClass="SpotifyTestViewController" customModule="Medley" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KlZ-zN-FPt"/>
+                        <viewControllerLayoutGuide type="bottom" id="rNp-2o-SzW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8aQ-5L-C4G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOw-sw-UC4">
+                                <rect key="frame" x="132" y="318" width="111" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="boA-yX-AoK"/>
+                                    <constraint firstAttribute="height" constant="30" id="rLQ-t2-t5N"/>
+                                </constraints>
+                                <state key="normal" title="Log in to spotify"/>
+                                <connections>
+                                    <action selector="loginButtonTap:" destination="Zlf-0h-IUI" eventType="touchUpInside" id="gm7-mX-kPv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hOw-sw-UC4" firstAttribute="centerY" secondItem="8aQ-5L-C4G" secondAttribute="centerY" id="1jz-Ws-90L"/>
+                            <constraint firstItem="hOw-sw-UC4" firstAttribute="centerX" secondItem="8aQ-5L-C4G" secondAttribute="centerX" id="mPd-PQ-ns2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="hOw-sw-UC4" id="BQg-G9-Oz7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3in-N7-Rix" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1498" y="484"/>
+        </scene>
         <!--Item 2-->
         <scene sceneID="ehI-Mi-aDB">
             <objects>
@@ -113,7 +151,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vOR-wz-h5G" id="pyd-aY-TGz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqw-Wu-F8G">
@@ -442,7 +480,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xOD-iI-h6l">
-                                <rect key="frame" x="13" y="0.0" width="350" height="258"/>
+                                <rect key="frame" x="12.5" y="0.0" width="350" height="258"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="350" height="258"/>
@@ -451,7 +489,7 @@
                                 <size key="customSize" width="350" height="258"/>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collapsedCell" id="gBh-ru-nx9" customClass="FeedCollapsedCell" customModule="Medley" customModuleProvider="target">
-                                <rect key="frame" x="7" y="268" width="362" height="180"/>
+                                <rect key="frame" x="6" y="268" width="362" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="362" height="180"/>

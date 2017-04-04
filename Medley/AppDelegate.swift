@@ -16,6 +16,7 @@ import FBSDKLoginKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
+	var sptAuth = SPTAuth()
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -40,13 +41,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			}
 		})
 		
+		//spotify
+		sptAuth.redirectURL = URL(string: "medleylogin://spotifycallback/")
+		sptAuth.sessionUserDefaultsKey = "current session"
+		
 		return true
 	}
 	
 	func loadMainStoryboard(){
 		self.window = UIWindow(frame: UIScreen.main.bounds)
 		let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-		let viewController = storyboard.instantiateViewController(withIdentifier: "MainTabController")
+		let viewController = storyboard.instantiateViewController(withIdentifier: "SpotifyTestVC")
 		self.window?.rootViewController = viewController
 		self.window?.makeKeyAndVisible()
 	}
@@ -61,7 +66,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 	
 	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-		print(url)
+		if(sptAuth.canHandle(sptAuth.redirectURL)){
+			sptAuth.handleAuthCallback(withTriggeredAuthURL: url, callback: { (error, session) in
+				if error != nil {
+					print("spt login callback error!")
+				}
+				let userDefaults = UserDefaults.standard
+				let sessionData = NSKeyedArchiver.archivedData(withRootObject: session!)
+				userDefaults.set(sessionData, forKey: "SpotifySession")
+				userDefaults.synchronize()
+				
+				NotificationCenter.default.post(name: Notification.Name(rawValue: "loginSuccessful"), object: nil)
+			})
+			
+		}
 		return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
 	}
 

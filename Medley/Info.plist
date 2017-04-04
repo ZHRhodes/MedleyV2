@@ -24,6 +24,16 @@
 				<string>fb1271900066202942</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.ios.MedleyApp.Medley</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>medleylogin</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
